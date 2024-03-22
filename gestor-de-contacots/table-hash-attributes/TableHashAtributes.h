@@ -1,0 +1,14 @@
+//
+// Created by Luis on 22/03/2024.
+//
+
+#ifndef GESTOR_DE_CONTACOTS_TABLEHASHATRIBUTES_H
+#define GESTOR_DE_CONTACOTS_TABLEHASHATRIBUTES_H
+
+
+class TableHashAtributes {
+
+};
+
+
+#endif //GESTOR_DE_CONTACOTS_TABLEHASHATRIBUTES_H
