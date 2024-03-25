@@ -8,8 +8,17 @@ add_executable(gestor_de_contacots main.cpp
         redimensionar/Arreglo.cpp
         funcionHash/FuncionHash.cpp
         atributo/Atributo.cpp
-        table-hash-attributes/TableHashAtributes.cpp
-        table-hash-attributes/TableHashAtributes.h
-        table-hash-attributes/TableHashAtributes.h
+        table-hash-attributes/TableHashAttributes.cpp
+        table-hash-attributes/TableHashAttributes.h
+        table-hash-attributes/TableHashAttributes.h
         item-hash-table/ItemHsGroup.cpp
-        item-hash-table/ItemHsGroup.h)
+        item-hash-table/ItemHsGroup.h
+        item-hash-table/ItemHsAttributes.cpp
+        item-hash-table/ItemHsAttributes.h
+        tree/Tree.cpp
+        tree/Tree.h
+        tree/ControladorArbol.cpp
+        tree/ControladorArbol.h
+        control-archivo/ControlArchivo.cpp
+        control-archivo/ControlArchivo.h
+)

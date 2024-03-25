@@ -15,16 +15,33 @@ public:
     //para el arbol
     Atributo *left;
     Atributo *right;
+    Atributo *father;
+    int id;
+    int hijosDerecho;
+    int hijosIzquierdo;
+    int factorEquilibrio;
 
     std::string tipo;
     std::string valor;
 
     Atributo(const std::string &tipo,
              const std::string &valor) :
+            valor(valor),
+            tipo(tipo),
             left(nullptr),
-            right(nullptr) {}
+            right(nullptr),
+            next(nullptr),
+            previous(nullptr),
+            father(nullptr) {
+        hijosDerecho = 0;
+        hijosIzquierdo = 0;
+        factorEquilibrio = 0;
+        id = 0;
+    }
 
     std::string getString();
+
+    void printInfo();
 };
 
 

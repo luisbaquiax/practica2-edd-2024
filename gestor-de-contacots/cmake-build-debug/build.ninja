@@ -79,17 +79,41 @@ build CMakeFiles/gestor_de_contacots.dir/atributo/Atributo.cpp.obj: CXX_COMPILER
   OBJECT_DIR = CMakeFiles\gestor_de_contacots.dir
   OBJECT_FILE_DIR = CMakeFiles\gestor_de_contacots.dir\atributo
 
-build CMakeFiles/gestor_de_contacots.dir/table-hash-attributes/TableHashAtributes.cpp.obj: CXX_COMPILER__gestor_de_contacots_unscanned_Debug C$:/Users/Usuario/Desktop/proyectos/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/table-hash-attributes/TableHashAtributes.cpp || cmake_object_order_depends_target_gestor_de_contacots
-  DEP_FILE = CMakeFiles\gestor_de_contacots.dir\table-hash-attributes\TableHashAtributes.cpp.obj.d
+build CMakeFiles/gestor_de_contacots.dir/table-hash-attributes/TableHashAttributes.cpp.obj: CXX_COMPILER__gestor_de_contacots_unscanned_Debug C$:/Users/Usuario/Desktop/proyectos/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/table-hash-attributes/TableHashAttributes.cpp || cmake_object_order_depends_target_gestor_de_contacots
+  DEP_FILE = CMakeFiles\gestor_de_contacots.dir\table-hash-attributes\TableHashAttributes.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\gestor_de_contacots.dir
   OBJECT_FILE_DIR = CMakeFiles\gestor_de_contacots.dir\table-hash-attributes
 
-build CMakeFiles/gestor_de_contacots.dir/item-hash-table/ItemHs.cpp.obj: CXX_COMPILER__gestor_de_contacots_unscanned_Debug C$:/Users/Usuario/Desktop/proyectos/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/item-hash-table/ItemHs.cpp || cmake_object_order_depends_target_gestor_de_contacots
-  DEP_FILE = CMakeFiles\gestor_de_contacots.dir\item-hash-table\ItemHs.cpp.obj.d
+build CMakeFiles/gestor_de_contacots.dir/item-hash-table/ItemHsGroup.cpp.obj: CXX_COMPILER__gestor_de_contacots_unscanned_Debug C$:/Users/Usuario/Desktop/proyectos/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/item-hash-table/ItemHsGroup.cpp || cmake_object_order_depends_target_gestor_de_contacots
+  DEP_FILE = CMakeFiles\gestor_de_contacots.dir\item-hash-table\ItemHsGroup.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\gestor_de_contacots.dir
   OBJECT_FILE_DIR = CMakeFiles\gestor_de_contacots.dir\item-hash-table
+
+build CMakeFiles/gestor_de_contacots.dir/item-hash-table/ItemHsAttributes.cpp.obj: CXX_COMPILER__gestor_de_contacots_unscanned_Debug C$:/Users/Usuario/Desktop/proyectos/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/item-hash-table/ItemHsAttributes.cpp || cmake_object_order_depends_target_gestor_de_contacots
+  DEP_FILE = CMakeFiles\gestor_de_contacots.dir\item-hash-table\ItemHsAttributes.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\gestor_de_contacots.dir
+  OBJECT_FILE_DIR = CMakeFiles\gestor_de_contacots.dir\item-hash-table
+
+build CMakeFiles/gestor_de_contacots.dir/tree/Tree.cpp.obj: CXX_COMPILER__gestor_de_contacots_unscanned_Debug C$:/Users/Usuario/Desktop/proyectos/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/tree/Tree.cpp || cmake_object_order_depends_target_gestor_de_contacots
+  DEP_FILE = CMakeFiles\gestor_de_contacots.dir\tree\Tree.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\gestor_de_contacots.dir
+  OBJECT_FILE_DIR = CMakeFiles\gestor_de_contacots.dir\tree
+
+build CMakeFiles/gestor_de_contacots.dir/tree/ControladorArbol.cpp.obj: CXX_COMPILER__gestor_de_contacots_unscanned_Debug C$:/Users/Usuario/Desktop/proyectos/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/tree/ControladorArbol.cpp || cmake_object_order_depends_target_gestor_de_contacots
+  DEP_FILE = CMakeFiles\gestor_de_contacots.dir\tree\ControladorArbol.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\gestor_de_contacots.dir
+  OBJECT_FILE_DIR = CMakeFiles\gestor_de_contacots.dir\tree
+
+build CMakeFiles/gestor_de_contacots.dir/control-archivo/ControlArchivo.cpp.obj: CXX_COMPILER__gestor_de_contacots_unscanned_Debug C$:/Users/Usuario/Desktop/proyectos/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/control-archivo/ControlArchivo.cpp || cmake_object_order_depends_target_gestor_de_contacots
+  DEP_FILE = CMakeFiles\gestor_de_contacots.dir\control-archivo\ControlArchivo.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\gestor_de_contacots.dir
+  OBJECT_FILE_DIR = CMakeFiles\gestor_de_contacots.dir\control-archivo
 
 
 # =============================================================================
@@ -99,7 +123,7 @@ build CMakeFiles/gestor_de_contacots.dir/item-hash-table/ItemHs.cpp.obj: CXX_COM
 #############################################
 # Link the executable gestor_de_contacots.exe
 
-build gestor_de_contacots.exe: CXX_EXECUTABLE_LINKER__gestor_de_contacots_Debug CMakeFiles/gestor_de_contacots.dir/main.cpp.obj CMakeFiles/gestor_de_contacots.dir/table-hash-gruoups/TableHashGruoup.cpp.obj CMakeFiles/gestor_de_contacots.dir/redimensionar/Arreglo.cpp.obj CMakeFiles/gestor_de_contacots.dir/funcionHash/FuncionHash.cpp.obj CMakeFiles/gestor_de_contacots.dir/atributo/Atributo.cpp.obj CMakeFiles/gestor_de_contacots.dir/table-hash-attributes/TableHashAtributes.cpp.obj CMakeFiles/gestor_de_contacots.dir/item-hash-table/ItemHs.cpp.obj
+build gestor_de_contacots.exe: CXX_EXECUTABLE_LINKER__gestor_de_contacots_Debug CMakeFiles/gestor_de_contacots.dir/main.cpp.obj CMakeFiles/gestor_de_contacots.dir/table-hash-gruoups/TableHashGruoup.cpp.obj CMakeFiles/gestor_de_contacots.dir/redimensionar/Arreglo.cpp.obj CMakeFiles/gestor_de_contacots.dir/funcionHash/FuncionHash.cpp.obj CMakeFiles/gestor_de_contacots.dir/atributo/Atributo.cpp.obj CMakeFiles/gestor_de_contacots.dir/table-hash-attributes/TableHashAttributes.cpp.obj CMakeFiles/gestor_de_contacots.dir/item-hash-table/ItemHsGroup.cpp.obj CMakeFiles/gestor_de_contacots.dir/item-hash-table/ItemHsAttributes.cpp.obj CMakeFiles/gestor_de_contacots.dir/tree/Tree.cpp.obj CMakeFiles/gestor_de_contacots.dir/tree/ControladorArbol.cpp.obj CMakeFiles/gestor_de_contacots.dir/control-archivo/ControlArchivo.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\gestor_de_contacots.dir

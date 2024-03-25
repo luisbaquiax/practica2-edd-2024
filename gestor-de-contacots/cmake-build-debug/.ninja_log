@@ -1,7 +1,19 @@
 # ninja log v5
 13	98	7327862392138074	CMakeFiles/gestor_de_contacots.dir/table-hash/TableHash.cpp.obj	7e634bce9654ce28
-25	474	7327862395892077	CMakeFiles/gestor_de_contacots.dir/atributo/Atributo.cpp.obj	b6d65d627c044c99
-500	628	7327867059826235	gestor_de_contacots.exe	cbd161de76da66ee
-10	450	7327866339194857	CMakeFiles/gestor_de_contacots.dir/funcionHash/FuncionHash.cpp.obj	455a4af6b4c387fd
+26	814	7329614222473330	CMakeFiles/gestor_de_contacots.dir/atributo/Atributo.cpp.obj	b6d65d627c044c99
+749	1055	7330383602858387	gestor_de_contacots.exe	e54d9233c0990339
+35	645	7330059600528179	CMakeFiles/gestor_de_contacots.dir/item-hash-table/ItemHsAttributes.cpp.obj	8b3bbb6a1ac748ec
+629	1205	7330059606130249	CMakeFiles/gestor_de_contacots.dir/tree/Tree.cpp.obj	f4fa346a41214501
+5	431	7329607617766933	CMakeFiles/gestor_de_contacots.dir/funcionHash/FuncionHash.cpp.obj	455a4af6b4c387fd
 7	566	7327862396842116	CMakeFiles/gestor_de_contacots.dir/redimensionar/Arreglo.cpp.obj	d7ca18aa533f98d6
-5	499	7327867058571544	CMakeFiles/gestor_de_contacots.dir/main.cpp.obj	4b34e941b8fac7d
+9	749	7330383599880889	CMakeFiles/gestor_de_contacots.dir/main.cpp.obj	4b34e941b8fac7d
+23	880	7330059602852917	CMakeFiles/gestor_de_contacots.dir/table-hash-attributes/TableHashAttributes.cpp.obj	ed2d817cb288d094
+16	894	7330059603013232	CMakeFiles/gestor_de_contacots.dir/table-hash-gruoups/TableHashGruoup.cpp.obj	79afa3d43e881c76
+29	628	7330059600355434	CMakeFiles/gestor_de_contacots.dir/item-hash-table/ItemHsGroup.cpp.obj	c24e5df0e0539b3
+24	724	7330383599614886	CMakeFiles/gestor_de_contacots.dir/tree/ControladorArbol.cpp.obj	841ddf27cfb65345
+19	691	7330395135573634	CMakeFiles/gestor_de_contacots.dir/control-archivo/ControlArchivo.cpp.obj	d8ce709f99827b67
+27	694	7330395135604846	CMakeFiles/gestor_de_contacots.dir/tree/ControladorArbol.cpp.obj	841ddf27cfb65345
+10	714	7330395135808687	CMakeFiles/gestor_de_contacots.dir/main.cpp.obj	4b34e941b8fac7d
+714	931	7330395137902186	gestor_de_contacots.exe	2debdd9b35369668
+9	566	7330399792480286	CMakeFiles/gestor_de_contacots.dir/control-archivo/ControlArchivo.cpp.obj	d8ce709f99827b67
+567	796	7330399794696709	gestor_de_contacots.exe	2debdd9b35369668
