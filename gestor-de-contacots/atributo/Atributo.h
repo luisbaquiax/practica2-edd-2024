@@ -14,9 +14,12 @@ const std::string DATE = "DATE";
 
 class Atributo {
 public:
-    //para ver su siguiente dato
+    //para ver su siguiente dato y su anterior
     Atributo *next;
     Atributo *previous;
+    //
+    Atributo *nextList;
+    Atributo *previousList;
     //para el arbol
     Atributo *left;
     Atributo *right;
@@ -33,7 +36,9 @@ public:
                  right(nullptr),
                  next(nullptr),
                  previous(nullptr),
-                 father(nullptr) {
+                 father(nullptr),
+                 nextList(nullptr),
+                 previousList(nullptr) {
         hijosDerecho = 0;
         hijosIzquierdo = 0;
         factorEquilibrio = 0;
@@ -56,7 +61,7 @@ public:
     }
 
     std::string getString();
-
+    std::string getInfoNextPrevious();
     void printInfo();
 };
 

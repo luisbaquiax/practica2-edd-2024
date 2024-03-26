@@ -3,25 +3,37 @@
 //
 
 #include "List.h"
-#include <iostream>
 
-template<typename T>
-
-void List<T>::addFinal(T *&nuevo) {
-    Nodo<T> *nodo = new Nodo<T>(nuevo);
-    if(isEmpity()){
-        initial = nodo;
-        end = nodo;
+void List::addFinal(Atributo *&nuevo) {
+    Atributo *agregando = new Atributo(nuevo->tipo,nuevo->valor);
+    agregando->next = nuevo->next;
+    agregando->previous = nuevo->previous;
+    if (isEmpity()) {
+        initial = agregando;
+        end = agregando;
         size++;
-    }else{
-        end->next = nodo;
-        nodo->previous = end;
-        end = nodo;
+    } else {
+        Atributo *temp = initial;
+        while (temp->nextList != nullptr) {
+            temp = temp->nextList;
+        }
+        temp->nextList = agregando;
+        agregando->previousList = temp;
+        end = agregando;
+        //actualizamos el siguiente del nuevo.
+        end->nextList = nullptr;
         size++;
     }
 }
 
-template<typename T>
-bool List<T>::isEmpity() {
+bool List::isEmpity() {
     return initial == nullptr;
+}
+
+void List::printList() {
+    Atributo *temp = initial;
+    while (temp!=nullptr){
+        temp->printInfo();
+        temp = temp->nextList;
+    }
 }

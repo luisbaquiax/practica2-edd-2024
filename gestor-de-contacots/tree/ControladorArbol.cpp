@@ -9,9 +9,6 @@ void ControladorArbol::insertar(Tree *arbol, Atributo *&nuevoAtributo) {
     Atributo *auxi;
     Atributo *anterior;
 
-    printf("datos del nuevo atributo... \n");
-    nuevoAtributo->printInfo();
-
     if (arbol->raiz == nullptr) {
         arbol->raiz = nuevoAtributo;
         arbol->idNodo++;

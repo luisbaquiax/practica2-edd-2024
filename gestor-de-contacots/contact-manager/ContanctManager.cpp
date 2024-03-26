@@ -4,6 +4,7 @@
 
 #include "ContanctManager.h"
 #include <iostream>
+#include "../list/List.h"
 
 ContanctManager::ContanctManager() {
     cantidadContactos = 0;
@@ -49,34 +50,66 @@ void ContanctManager::insertContact(std::string &nameGruop, Atributo **&listAtri
         listAtributos[i]->next = listAtributos[i + 1];
         listAtributos[i + 1]->previous = listAtributos[i];
     }
-    for (int i = tam - 1; i >= 1; --i) {
-        listAtributos[i]->previous = listAtributos[i - 1];
-        listAtributos[i-1]->next = listAtributos[i];
-    }
-    printf("atributos... tamNamesAttributes: %d\n", tam);
-
-    for (int i = 0; i < tam; ++i) {
-        std::cout << listAtributos[i]->getString() << std::endl;
-    }
     TableHashAttributes *table = hashGruoup.getItemGroup(nameGruop)->tableAtributes;
+    ItemHsGroup *itemHsGroup = hashGruoup.getItemGroup(nameGruop);
 
-    printf("ingresando contacto... tamNamesAttributes: %d\n", table->size);
-    for (int i = 0; i < tam; ++i) {
-        Atributo *nuevo = listAtributos[i];
-        nuevo->next = listAtributos[i]->next;
-        nuevo->previous = listAtributos[i]->previous;
-        //agreamos los datos al arbol correspondiente
-        controladorArbol.insertar(table->getItemAttribute(listAtributos[i]->tipo)->tree, nuevo);
-        cantidadContactos++;
-        /*for (int j = 0; j < table->size; ++j) {
-            if (table->itemsAttributes[j] != nullptr) {
-                printf("pos: %d ", j);
-                std::cout << table->itemsAttributes[j]->key << std::endl;
-                if (listAtributos[i]->tipo == table->itemsAttributes[j]->key) {
-                    controladorArbol.insertar(table->itemsAttributes[j]->tree, nuevo);
-                    break;
-                }
+    if (tam == itemHsGroup->tamNamesAttributes) {
+        printf("ingresando contacto... tamNamesAttributes: %d\n", itemHsGroup->tamNamesAttributes);
+        for (int i = 0; i < tam; ++i) {
+            Atributo *nuevo = listAtributos[i];
+            //agreamos los datos al arbol correspondiente
+            controladorArbol.insertar(table->getItemAttribute(listAtributos[i]->tipo)->tree, nuevo);
+            cantidadContactos++;
+        }
+    } else {
+        printf("No se puede ingresar el contacto.\n");
+        printf("La lista de atributos nuevos no conicide con el tamanio del listado de atributos\n");
+    }
+
+}
+
+void ContanctManager::searchContact(std::string &nameGruop, Atributo *&buscando) {
+    List *listado = new List();
+
+    ItemHsGroup *group = hashGruoup.getItemGroup(nameGruop);
+
+    if (group != nullptr) {
+        ItemHsAttributes *tabAttri = group->tableAtributes->getItemAttribute(buscando->tipo);
+        if (tabAttri != nullptr) {
+            std::cout << "Contactos encontrados del grupo: " << nameGruop << std::endl;
+            Atributo *auxi = tabAttri->tree->raiz;
+            if (auxi->valor == buscando->valor) {
+                listado->addFinal(auxi);
             }
-        }*/
+            searchContactRecursive(buscando, auxi, listado);
+            Atributo *tem = listado->initial;
+            while (tem != nullptr) {
+                std::cout << tem->getInfoNextPrevious() << std::endl;
+                tem = tem->nextList;
+            }
+        } else {
+            std::cout << "No existe datos con el parametro: "
+                      << buscando->tipo << " = "
+                      << buscando->valor << std::endl;
+        }
+    } else {
+        std::cout << "No existe el grupo " << nameGruop << std::endl;
+    }
+}
+
+void ContanctManager::searchContactRecursive(Atributo *buscando, Atributo *nodo, List *&list) {
+    if (nodo != nullptr) {
+        if (nodo->left != nullptr) {
+            if (nodo->left->valor == buscando->valor) {
+                //Atributo *nuevo = nodo->left;
+                list->addFinal(nodo->left);
+            }
+        }
+        if (nodo->right != nullptr) {
+            //Atributo *nuevo = nodo->right;
+            if (nodo->right->valor == buscando->valor) {
+                list->addFinal(nodo->right);
+            }
+        }
     }
 }

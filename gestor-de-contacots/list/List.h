@@ -5,22 +5,22 @@
 #ifndef GESTOR_DE_CONTACOTS_LIST_H
 #define GESTOR_DE_CONTACOTS_LIST_H
 
-#include "Nodo.h"
 #include <iostream>
-
-template<typename T>
+#include "../atributo/Atributo.h"
 class List {
 public:
-    Nodo<T> *initial;
-    Nodo<T> *end;
+    Atributo *initial;
+    Atributo *end;
 
     List() : size(0), initial(nullptr), end(nullptr) {}
 
     int size;
 
-    void addFinal(T *&nuevo);
+    void addFinal(Atributo *&nuevo);
 
     bool isEmpity();
+
+    void printList();
 
 };
 

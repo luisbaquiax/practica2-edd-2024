@@ -30,8 +30,8 @@ void TableHashAttributes::push(std::string key, Tree *&tree) {
 }
 
 void TableHashAttributes::inicializar(int &tam) {
-    size = tam * 2;
-    std::cout << "tamNamesAttributes inicial de TableHashAttributes: " << size << std::endl;
+    size = tam * 3;
+    std::cout << "size inicial de TableHashAttributes: " << size << std::endl;
     itemsAttributes = new ItemHsAttributes *[size];
     for (int i = 0; i < size; ++i) {
         itemsAttributes[i] = nullptr;

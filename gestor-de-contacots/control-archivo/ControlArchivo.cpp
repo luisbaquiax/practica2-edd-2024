@@ -24,3 +24,9 @@ void ControlArchivo::generarImagen(std::string &content) {
     }
 
 }
+
+void ControlArchivo::generarCarpeta(std::string &ruta) {
+
+}
+
+void ControlArchivo::generarArchivos(std::string &ruta, std::string &content) {}

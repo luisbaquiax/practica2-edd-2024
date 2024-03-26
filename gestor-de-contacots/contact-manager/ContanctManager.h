@@ -8,6 +8,7 @@
 #include "../table-hash-gruoups/TableHashGruoup.h"
 #include "../item-hash-table/ItemHsGroup.h"
 #include "../tree/ControladorArbol.h"
+#include "../list/List.h"
 
 class ContanctManager {
 private:
@@ -25,7 +26,9 @@ public:
 
     void insertContact(std::string &nameGruop, Atributo **&listAtributos, int tam);
 
-    void verInfoPorGrupo();
+    void searchContact(std::string &nameGruop, Atributo *&buscando);
+
+    void searchContactRecursive(Atributo *buscando, Atributo *nodo, List *&list);
 };
 
 

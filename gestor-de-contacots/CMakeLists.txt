@@ -24,8 +24,6 @@ add_executable(gestor_de_contacots main.cpp
         contact-manager/ContanctManager.h
         control-data/ControlDataInput.cpp
         control-data/ControlDataInput.h
-        list/Nodo.cpp
-        list/Nodo.h
         list/List.cpp
         list/List.h
         report/Report.cpp

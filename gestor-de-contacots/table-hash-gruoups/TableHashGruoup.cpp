@@ -11,7 +11,6 @@ TableHashGruoup::TableHashGruoup() {
 
 void TableHashGruoup::push(std::string &key, TableHashAttributes *&tableHashAtributes) {
     validarDimension();
-    printf("tamNamesAttributes grupo: %d\n", tam);
     int index = f.getIndice(f.valueHash(key), this->tam);
     if (items[index] != nullptr) {
         printf("hubo una colision de grupo\n");
@@ -24,7 +23,6 @@ void TableHashGruoup::push(std::string &key, TableHashAttributes *&tableHashAtri
             }
         }
     } else {
-        printf("index del grupo: %d\n", index);
         items[index] = new ItemHsGroup();
         items[index]->key = key;
         items[index]->tableAtributes = tableHashAtributes;
@@ -44,10 +42,9 @@ void TableHashGruoup::addColision(std::string &key, TableHashAttributes *&tableH
 }
 
 void TableHashGruoup::redimensionar(int &longitud) {
-    printf("redimensionando\n");
     int size = 10;
     setTam(size);
-    printf("longitud nueva: %d\n", tam);
+    printf("Longitud nueva: %d\n", tam);
     ItemHsGroup **auxiItems = new ItemHsGroup *[tam];
     for (int i = 0; i < longitud - 10; ++i) {
         auxiItems[i] = items[i];
@@ -76,7 +73,6 @@ void TableHashGruoup::validarDimension() {
 void TableHashGruoup::iniciliarItems() {
     tam = 5;
     items = new ItemHsGroup *[tam];
-    std::cout << "Longitud inicial: " << tam << std::endl;
     for (int i = 0; i < tam; ++i) {
         items[i] = nullptr;
     }
@@ -92,14 +88,19 @@ void TableHashGruoup::setTam(int &number) {
 
 ItemHsGroup *TableHashGruoup::getItemGroup(std::string &nameGruoup) {
     int index = f.getIndice(f.valueHash(nameGruoup), this->tam);
-    if (items[index]->key == nameGruoup) {
-        return items[index];
-    } else {
-        for (int i = 0; i < tam; ++i) {
+    ItemHsGroup *itemHsGroup = nullptr;
+    if (items[index] != nullptr) {
+        if (items[index]->key == nameGruoup) {
+            return items[index];
+        }
+    }
+    for (int i = 0; i < tam; ++i) {
+        if (items[i] != nullptr) {
             if (items[i]->key == nameGruoup) {
-                return items[i];
+                itemHsGroup = items[i];
+                break;
             }
         }
     }
-    return nullptr;
+    return itemHsGroup;
 }
