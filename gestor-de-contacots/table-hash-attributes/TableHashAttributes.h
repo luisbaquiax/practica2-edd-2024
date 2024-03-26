@@ -25,6 +25,8 @@ public:
 
     ItemHsAttributes *getItemAttribute(std::string &key);
 
+    void
+
 };
 
 

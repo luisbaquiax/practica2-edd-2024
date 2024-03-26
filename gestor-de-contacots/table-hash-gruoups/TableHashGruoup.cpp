@@ -9,11 +9,38 @@ TableHashGruoup::TableHashGruoup() {
     iniciliarItems();
 }
 
-void TableHashGruoup::push(std::string key, TableHashAttributes *&tableHashAtributes) {
+void TableHashGruoup::push(std::string &key, TableHashAttributes *&tableHashAtributes) {
+    validarDimension();
+    printf("tamNamesAttributes grupo: %d\n", tam);
     int index = f.getIndice(f.valueHash(key), this->tam);
-    items[index] = new ItemHsGroup();
-    items[index]->key = key;
-    items[index]->tableAtributes = tableHashAtributes;
+    if (items[index] != nullptr) {
+        printf("hubo una colision de grupo\n");
+        for (int i = 0; i < tam; ++i) {
+            if (items[i] == nullptr) {
+                items[i] = new ItemHsGroup();
+                items[i]->key = key;
+                items[i]->tableAtributes = tableHashAtributes;
+                break;
+            }
+        }
+    } else {
+        printf("index del grupo: %d\n", index);
+        items[index] = new ItemHsGroup();
+        items[index]->key = key;
+        items[index]->tableAtributes = tableHashAtributes;
+    }
+
+}
+
+void TableHashGruoup::addColision(std::string &key, TableHashAttributes *&tableHashAtributes) {
+    for (int i = 0; i < tam; ++i) {
+        if (items[i] == nullptr) {
+            items[i] = new ItemHsGroup();
+            items[i]->key = key;
+            items[i]->tableAtributes = tableHashAtributes;
+            return;
+        }
+    }
 }
 
 void TableHashGruoup::redimensionar(int &longitud) {
@@ -63,6 +90,16 @@ void TableHashGruoup::setTam(int &number) {
     tam = tam + number;
 }
 
-ItemHsGroup *TableHashGruoup::getItemGroup(std::string key) {
-    return items[f.getIndice(f.valueHash(key), this->tam)];
+ItemHsGroup *TableHashGruoup::getItemGroup(std::string &nameGruoup) {
+    int index = f.getIndice(f.valueHash(nameGruoup), this->tam);
+    if (items[index]->key == nameGruoup) {
+        return items[index];
+    } else {
+        for (int i = 0; i < tam; ++i) {
+            if (items[i]->key == nameGruoup) {
+                return items[i];
+            }
+        }
+    }
+    return nullptr;
 }

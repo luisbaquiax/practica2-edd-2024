@@ -38,6 +38,10 @@ public:
 
     std::string generarGrapvhiz(Tree *a);
 
+    void liberarMemrorira(Tree *arbol);
+
+    void liberarMemoriaNodos(Atributo *nodo);
+
 };
 
 

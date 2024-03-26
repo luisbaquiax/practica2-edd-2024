@@ -7,6 +7,11 @@
 
 #include "string"
 
+const std::string ENTEROS = "INTEGER";
+const std::string CADENA = "STRING";
+const std::string CARACTERES = "CHAR";
+const std::string DATE = "DATE";
+
 class Atributo {
 public:
     //para ver su siguiente dato
@@ -23,6 +28,17 @@ public:
 
     std::string tipo;
     std::string valor;
+
+    Atributo() : left(nullptr),
+                 right(nullptr),
+                 next(nullptr),
+                 previous(nullptr),
+                 father(nullptr) {
+        hijosDerecho = 0;
+        hijosIzquierdo = 0;
+        factorEquilibrio = 0;
+        id = 0;
+    };
 
     Atributo(const std::string &tipo,
              const std::string &valor) :

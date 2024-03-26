@@ -12,7 +12,7 @@ class Tree {
 public:
     Atributo *raiz;
     FuncionHash f;
-
+    int id;
     int altura;
     int idNodo;
 };

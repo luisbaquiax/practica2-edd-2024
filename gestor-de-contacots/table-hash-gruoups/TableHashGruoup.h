@@ -20,7 +20,9 @@ public:
     TableHashGruoup();
 
     //functions
-    void push(std::string key, TableHashAttributes *&tableHashAtributes);
+    void push(std::string &key, TableHashAttributes *&tableHashAtributes);
+
+    void addColision(std::string &key, TableHashAttributes *&tableHashAtributes);
 
     void redimensionar(int &longitud);
 
@@ -32,7 +34,7 @@ public:
 
     void setTam(int &number);
 
-    ItemHsGroup *getItemGroup(std::string key);
+    ItemHsGroup *getItemGroup(std::string &nameGruoup);
 };
 
 

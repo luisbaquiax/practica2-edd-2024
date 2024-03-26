@@ -8,10 +8,10 @@
 void ControladorArbol::insertar(Tree *arbol, Atributo *&nuevoAtributo) {
     Atributo *auxi;
     Atributo *anterior;
-    printf("nuevo ");
-    printf("valor: %d\n", f.valueHash(nuevoAtributo->valor));
+
+    printf("datos del nuevo atributo... \n");
     nuevoAtributo->printInfo();
-    printf("\n");
+
     if (arbol->raiz == nullptr) {
         arbol->raiz = nuevoAtributo;
         arbol->idNodo++;
@@ -22,7 +22,6 @@ void ControladorArbol::insertar(Tree *arbol, Atributo *&nuevoAtributo) {
         auxi = arbol->raiz;
         while (auxi != nullptr) {
             anterior = auxi;
-            printf("valores: %d %d\n", f.valueHash(nuevoAtributo->valor), f.valueHash(auxi->valor));
             if (nuevoAtributo->valor.compare(auxi->valor) > 0) {
                 auxi = auxi->right;
             } else {
@@ -168,8 +167,20 @@ void ControladorArbol::rotacionDerechaDerecha(Tree *arbol, Atributo *nodo) {
  * @param conent
  */
 void ControladorArbol::generRecursivo(Atributo *nodo, std::string &conent) {
+    /**
+     // Nodo 1 con valor "A" y ID "n1"
+    n1 [id="n1", label="12-12-12"];
+
+    // Nodo 2 con valor "A" y ID "n2"
+    n2 [id="n2", label="A"];
+
+    // Enlace entre los nodos
+    n1 -> n2;
+    }
+     */
     if (nodo != nullptr) {
         if (nodo->left != nullptr) {
+            std::string nodoIzquierdo;
             conent += nodo->valor + "->" + nodo->left->valor;
             conent += ";\n";
             generRecursivo(nodo->left, conent);
@@ -186,7 +197,19 @@ std::string ControladorArbol::generarGrapvhiz(Tree *a) {
     std::string content;
     Atributo *aux = a->raiz;
     content += "digraph ArbolBinario {\n";
+
+    if (aux->left == nullptr && aux->right == nullptr) {
+        content += (aux->valor) + ";\n";
+    }
     generRecursivo(aux, content);
     content += "}";
     return content;
+}
+
+void ControladorArbol::liberarMemrorira(Tree *arbol) {
+
+}
+
+void ControladorArbol::liberarMemoriaNodos(Atributo *nodo) {
+
 }

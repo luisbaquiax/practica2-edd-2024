@@ -1,0 +1,14 @@
+//
+// Created by Luis on 24/03/2024.
+//
+
+#ifndef GESTOR_DE_CONTACOTS_CONTROLDATAINPUT_H
+#define GESTOR_DE_CONTACOTS_CONTROLDATAINPUT_H
+
+
+class ControlDataInput {
+
+};
+
+
+#endif //GESTOR_DE_CONTACOTS_CONTROLDATAINPUT_H
