@@ -11,9 +11,9 @@ class ControlArchivo {
 public:
     void generarImagen(std::string &content);
 
-    void generarCarpeta(std::string &ruta);
+    void generarCarpeta(std::string ruta);
 
-    void generarArchivos(std::string &ruta, std::string &content);
+    void generarArchivos(std::string carpeta, std::string nombreArchivo, std::string &content);
 };
 
 

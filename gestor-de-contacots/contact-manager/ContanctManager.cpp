@@ -103,13 +103,61 @@ void ContanctManager::searchContactRecursive(Atributo *buscando, Atributo *nodo,
             if (nodo->left->valor == buscando->valor) {
                 //Atributo *nuevo = nodo->left;
                 list->addFinal(nodo->left);
+                searchContactRecursive(buscando, nodo->left, list);
             }
         }
         if (nodo->right != nullptr) {
             //Atributo *nuevo = nodo->right;
             if (nodo->right->valor == buscando->valor) {
                 list->addFinal(nodo->right);
+                searchContactRecursive(buscando, nodo->right, list);
             }
         }
+    }
+}
+
+void ContanctManager::generateFileByGruop(std::string &nameGruop) {
+    ItemHsGroup *itemHsGroup = hashGruoup.getItemGroup(nameGruop);
+    if (itemHsGroup != nullptr) {
+        auto *listaNames = itemHsGroup->listNameAttributes;
+        Tree *arbol = itemHsGroup->tableAtributes->getItemAttribute(*listaNames[0])->tree;
+        Atributo *auxi = arbol->raiz;
+
+        controlArchivo.generarCarpeta(nameGruop);
+
+        std::string content;
+        std::string name;
+        name += std::to_string(auxi->id) + " " + nameGruop + auxi->valor + ".txt";
+        content = auxi->getInfoNextPrevious();
+
+        controlArchivo.generarArchivos(nameGruop, name, content);
+
+        generarFileRecursive(auxi, nameGruop);
+
+    } else {
+        std::cout << "No existe el grupo " << nameGruop << std::endl;
+    }
+}
+
+void ContanctManager::generarFileRecursive(Atributo *nodo, std::string &nameGroup) {
+    if (nodo != nullptr) {
+        std::string content;
+        std::string name;
+
+        if (nodo->left != nullptr) {
+            name += std::to_string(nodo->left->id) + " " + nameGroup + nodo->left->valor + ".txt";
+            content = nodo->left->getInfoNextPrevious();
+            controlArchivo.generarArchivos(nameGroup, name, content);
+
+            generarFileRecursive(nodo->left, nameGroup);
+        }
+        if (nodo->right != nullptr) {
+            name += std::to_string(nodo->right->id) + " " + nameGroup + nodo->right->valor + ".txt";
+            content = nodo->right->getInfoNextPrevious();
+            controlArchivo.generarArchivos(nameGroup, name, content);
+
+            generarFileRecursive(nodo->right, nameGroup);
+        }
+
     }
 }

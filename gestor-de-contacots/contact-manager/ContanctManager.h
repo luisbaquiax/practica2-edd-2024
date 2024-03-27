@@ -4,11 +4,13 @@
 
 #ifndef GESTOR_DE_CONTACOTS_CONTANCTMANAGER_H
 #define GESTOR_DE_CONTACOTS_CONTANCTMANAGER_H
+#include <string>
 
 #include "../table-hash-gruoups/TableHashGruoup.h"
 #include "../item-hash-table/ItemHsGroup.h"
 #include "../tree/ControladorArbol.h"
 #include "../list/List.h"
+#include "../control-archivo/ControlArchivo.h"
 
 class ContanctManager {
 private:
@@ -21,6 +23,8 @@ public:
     TableHashGruoup hashGruoup;
     ControladorArbol controladorArbol;
 
+    ControlArchivo controlArchivo;
+
     void createGruop(std::string &nameGruop, Atributo **&listAtributos, int tam);
 
 
@@ -29,6 +33,10 @@ public:
     void searchContact(std::string &nameGruop, Atributo *&buscando);
 
     void searchContactRecursive(Atributo *buscando, Atributo *nodo, List *&list);
+
+    void generateFileByGruop(std::string &nameGruop);
+
+    void generarFileRecursive(Atributo *nodo, std::string &nameGroup);
 };
 
 

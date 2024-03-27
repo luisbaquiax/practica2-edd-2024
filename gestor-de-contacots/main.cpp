@@ -1,5 +1,5 @@
 #include <iostream>
-#include "string"
+#include <string>
 #include <vector>
 #include "funcionHash/FuncionHash.h"
 #include "table-hash-gruoups/TableHashGruoup.h"
@@ -9,6 +9,7 @@
 #include "contact-manager/ContanctManager.h"
 #include "list/List.h"
 #include "report/Report.h"
+#include "control-archivo/ControlArchivo.h"
 
 using std::cout;
 using std::endl;
@@ -93,9 +94,6 @@ int main() {
          printf("es nulo\n");
      }*/
 
-    Atributo *temporal = arbol2->raiz;
-    std::cout << temporal->getInfoNextPrevious() << endl;
-
     /*Report report;
     report.cantidadDatosPorGrupo(key, c);
     std::cout << "Cantidad de datos en el grupo " << key << ": " << report.cantidad << std::endl;
@@ -123,5 +121,6 @@ int main() {
             std::cout<<c.hashGruoup.items[i]->key<<endl;
         }
     }*/
+    c.generateFileByGruop(key);
     return EXIT_SUCCESS;
 }

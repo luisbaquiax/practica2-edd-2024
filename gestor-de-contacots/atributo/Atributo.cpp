@@ -6,7 +6,7 @@
 #include <iostream>
 
 std::string Atributo::getString() {
-    return std::to_string(id) + " Tipo: " + tipo + " Valor: " + valor
+    return "id: "+std::to_string(id) + " Tipo: " + tipo + " Valor: " + valor
            + " Factor equilibrio: " + std::to_string(factorEquilibrio);
 }
 

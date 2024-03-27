@@ -23,7 +23,7 @@ public:
 
     void inicializar(int &tam);
 
-    ItemHsAttributes *getItemAttribute(std::string &key);
+    ItemHsAttributes *getItemAttribute(std::string &nameAttribute);
 
 };
 

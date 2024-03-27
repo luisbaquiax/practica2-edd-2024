@@ -6,6 +6,7 @@
 
 void List::addFinal(Atributo *&nuevo) {
     Atributo *agregando = new Atributo(nuevo->tipo,nuevo->valor);
+    agregando->id = nuevo->id;
     agregando->next = nuevo->next;
     agregando->previous = nuevo->previous;
     if (isEmpity()) {

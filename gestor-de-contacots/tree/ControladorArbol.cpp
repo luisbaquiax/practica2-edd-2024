@@ -180,11 +180,13 @@ void ControladorArbol::generRecursivo(Atributo *nodo, std::string &conent) {
             std::string nodoIzquierdo;
             conent += nodo->valor + "->" + nodo->left->valor;
             conent += ";\n";
+            nodo->left->printInfo();
             generRecursivo(nodo->left, conent);
         }
         if (nodo->right != nullptr) {
             conent += nodo->valor + "->" + nodo->right->valor;
             conent += ";\n";
+            nodo->right->printInfo();
             generRecursivo(nodo->right, conent);
         }
     }

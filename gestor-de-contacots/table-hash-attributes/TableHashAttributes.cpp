@@ -44,22 +44,22 @@ void TableHashAttributes::setSize(int &number) {
 
 /**
  * Busca la referencia del arbol del atributo especificado
- * @param key
+ * @param nameAttribute is the key
  * @return
  */
-ItemHsAttributes *TableHashAttributes::getItemAttribute(std::string &key) {
-    int index = funcionHash.getIndice(funcionHash.valueHash(key), size);
+ItemHsAttributes *TableHashAttributes::getItemAttribute(std::string &nameAttribute) {
+    int index = funcionHash.getIndice(funcionHash.valueHash(nameAttribute), size);
     //printf("index buscado: %d\n", index);
     ItemHsAttributes *itemHsAttributes = nullptr;
     if (itemsAttributes[index] != nullptr) {
-        if (itemsAttributes[index]->key == key) {
+        if (itemsAttributes[index]->key == nameAttribute) {
             itemHsAttributes = itemsAttributes[index];
             return  itemHsAttributes;
         }
     }
     for (int i = 0; i < size; ++i) {
         if (itemsAttributes[i] != nullptr) {
-            if (itemsAttributes[i]->key == key) {
+            if (itemsAttributes[i]->key == nameAttribute) {
                 itemHsAttributes = itemsAttributes[i];
                 break;
             }
