@@ -9,8 +9,18 @@
 
 class Log {
 public:
+
+    Log(const std::string &fechaHora,
+        const std::string &tipoAccion) :
+            fechaHora(fechaHora), tipoAccion(tipoAccion), next(nullptr), previous(nullptr) {};
+    Log *next;
+    Log *previous;
+
+
     std::string fechaHora;
     std::string tipoAccion;
+
+    std::string getInfo();
 };
 
 

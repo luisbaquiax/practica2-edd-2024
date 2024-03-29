@@ -47,3 +47,11 @@ void Report::cantidadContactosPorGrupo(std::string &nameGroup, ContanctManager c
     std::cout << "Cantidad de contactos del grupo " << nameGroup << ": " << cantidad << std::endl;
     cantidad = 0;
 }
+
+void Report::generarArchivoLog(ContanctManager contanctManager) {
+    contanctManager.controlArchivo.generarCarpeta("log-sistema");
+    std::string content = contanctManager.listLog.getAllData();
+    printf("//----------------------HISTORIAL DEL SISTEMA//----------------------\n");
+    std::cout<<content<<std::endl;
+    contanctManager.controlArchivo.generarArchivos("log-sistema","log.txt",content);
+}

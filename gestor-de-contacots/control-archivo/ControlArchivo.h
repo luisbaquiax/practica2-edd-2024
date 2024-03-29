@@ -9,7 +9,7 @@
 
 class ControlArchivo {
 public:
-    void generarImagen(std::string &content);
+    void generarImagen(std::string &ruta, std::string &content);
 
     void generarCarpeta(std::string ruta);
 

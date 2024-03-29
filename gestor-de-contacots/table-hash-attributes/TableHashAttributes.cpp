@@ -6,17 +6,23 @@
 #include <iostream>
 
 TableHashAttributes::TableHashAttributes() {
+    size = 0;
+    contadorId = 0;
 }
 
 void TableHashAttributes::push(std::string key, Tree *&tree) {
     auto *itemsAtt = new ItemHsAttributes();
     int index = funcionHash.getIndice(funcionHash.valueHash(key), size);
+
+    contadorId++;
+
     if (itemsAttributes[index] != nullptr) {
         printf("hubo una colision de atributos\n");
         for (int i = 0; i < size; ++i) {
             if (itemsAttributes[i] == nullptr) {
                 itemsAtt->key = key;
                 itemsAtt->tree = tree;
+                itemsAtt->id = contadorId;
                 itemsAttributes[i] = itemsAtt;
                 break;
             }
@@ -24,12 +30,14 @@ void TableHashAttributes::push(std::string key, Tree *&tree) {
     } else {
         itemsAtt->key = key;
         itemsAtt->tree = tree;
+        itemsAtt->id = contadorId;
         itemsAttributes[index] = itemsAtt;
     }
 
 }
 
 void TableHashAttributes::inicializar(int &tam) {
+    contadorId = 0;
     size = tam * 3;
     std::cout << "size inicial de TableHashAttributes: " << size << std::endl;
     itemsAttributes = new ItemHsAttributes *[size];
@@ -54,7 +62,7 @@ ItemHsAttributes *TableHashAttributes::getItemAttribute(std::string &nameAttribu
     if (itemsAttributes[index] != nullptr) {
         if (itemsAttributes[index]->key == nameAttribute) {
             itemHsAttributes = itemsAttributes[index];
-            return  itemHsAttributes;
+            return itemHsAttributes;
         }
     }
     for (int i = 0; i < size; ++i) {
@@ -66,4 +74,13 @@ ItemHsAttributes *TableHashAttributes::getItemAttribute(std::string &nameAttribu
         }
     }
     return itemHsAttributes;
+}
+
+ItemHsAttributes *TableHashAttributes::getItemAttributeByID(int id) {
+    for (int i = 0; i < size; ++i) {
+        if (itemsAttributes[i]->id == id) {
+            return itemsAttributes[i];
+        }
+    }
+    return nullptr;
 }

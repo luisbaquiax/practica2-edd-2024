@@ -4,6 +4,7 @@
 
 #ifndef GESTOR_DE_CONTACOTS_REPORT_H
 #define GESTOR_DE_CONTACOTS_REPORT_H
+
 #include "string"
 
 #include "../contact-manager/ContanctManager.h"
@@ -11,10 +12,16 @@
 class Report {
 public:
     Report();
+
     int cantidad;
+
     void cantidadDatosPorGrupo(std::string &nameGroup, ContanctManager contanctManager);
+
     void cantidadDatosDelSistema(ContanctManager contanctManager);
+
     void cantidadContactosPorGrupo(std::string &nameGroup, ContanctManager contanctManager);
+
+    void generarArchivoLog(ContanctManager contanctManager);
 };
 
 

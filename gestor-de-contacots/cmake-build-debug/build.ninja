@@ -139,11 +139,17 @@ build CMakeFiles/gestor_de_contacots.dir/log/Log.cpp.obj: CXX_COMPILER__gestor_d
   OBJECT_DIR = CMakeFiles\gestor_de_contacots.dir
   OBJECT_FILE_DIR = CMakeFiles\gestor_de_contacots.dir\log
 
-build CMakeFiles/gestor_de_contacots.dir/menu/menu.cpp.obj: CXX_COMPILER__gestor_de_contacots_unscanned_Debug C$:/Users/Usuario/Desktop/proyectos/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/menu/menu.cpp || cmake_object_order_depends_target_gestor_de_contacots
-  DEP_FILE = CMakeFiles\gestor_de_contacots.dir\menu\menu.cpp.obj.d
+build CMakeFiles/gestor_de_contacots.dir/menu/Menu.cpp.obj: CXX_COMPILER__gestor_de_contacots_unscanned_Debug C$:/Users/Usuario/Desktop/proyectos/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/menu/Menu.cpp || cmake_object_order_depends_target_gestor_de_contacots
+  DEP_FILE = CMakeFiles\gestor_de_contacots.dir\menu\Menu.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\gestor_de_contacots.dir
   OBJECT_FILE_DIR = CMakeFiles\gestor_de_contacots.dir\menu
+
+build CMakeFiles/gestor_de_contacots.dir/log/ListLog.cpp.obj: CXX_COMPILER__gestor_de_contacots_unscanned_Debug C$:/Users/Usuario/Desktop/proyectos/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/log/ListLog.cpp || cmake_object_order_depends_target_gestor_de_contacots
+  DEP_FILE = CMakeFiles\gestor_de_contacots.dir\log\ListLog.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\gestor_de_contacots.dir
+  OBJECT_FILE_DIR = CMakeFiles\gestor_de_contacots.dir\log
 
 
 # =============================================================================
@@ -153,7 +159,7 @@ build CMakeFiles/gestor_de_contacots.dir/menu/menu.cpp.obj: CXX_COMPILER__gestor
 #############################################
 # Link the executable gestor_de_contacots.exe
 
-build gestor_de_contacots.exe: CXX_EXECUTABLE_LINKER__gestor_de_contacots_Debug CMakeFiles/gestor_de_contacots.dir/main.cpp.obj CMakeFiles/gestor_de_contacots.dir/table-hash-gruoups/TableHashGruoup.cpp.obj CMakeFiles/gestor_de_contacots.dir/funcionHash/FuncionHash.cpp.obj CMakeFiles/gestor_de_contacots.dir/atributo/Atributo.cpp.obj CMakeFiles/gestor_de_contacots.dir/table-hash-attributes/TableHashAttributes.cpp.obj CMakeFiles/gestor_de_contacots.dir/item-hash-table/ItemHsGroup.cpp.obj CMakeFiles/gestor_de_contacots.dir/item-hash-table/ItemHsAttributes.cpp.obj CMakeFiles/gestor_de_contacots.dir/tree/Tree.cpp.obj CMakeFiles/gestor_de_contacots.dir/tree/ControladorArbol.cpp.obj CMakeFiles/gestor_de_contacots.dir/control-archivo/ControlArchivo.cpp.obj CMakeFiles/gestor_de_contacots.dir/contact-manager/ContanctManager.cpp.obj CMakeFiles/gestor_de_contacots.dir/control-data/ControlDataInput.cpp.obj CMakeFiles/gestor_de_contacots.dir/list/List.cpp.obj CMakeFiles/gestor_de_contacots.dir/report/Report.cpp.obj CMakeFiles/gestor_de_contacots.dir/log/Log.cpp.obj CMakeFiles/gestor_de_contacots.dir/menu/menu.cpp.obj
+build gestor_de_contacots.exe: CXX_EXECUTABLE_LINKER__gestor_de_contacots_Debug CMakeFiles/gestor_de_contacots.dir/main.cpp.obj CMakeFiles/gestor_de_contacots.dir/table-hash-gruoups/TableHashGruoup.cpp.obj CMakeFiles/gestor_de_contacots.dir/funcionHash/FuncionHash.cpp.obj CMakeFiles/gestor_de_contacots.dir/atributo/Atributo.cpp.obj CMakeFiles/gestor_de_contacots.dir/table-hash-attributes/TableHashAttributes.cpp.obj CMakeFiles/gestor_de_contacots.dir/item-hash-table/ItemHsGroup.cpp.obj CMakeFiles/gestor_de_contacots.dir/item-hash-table/ItemHsAttributes.cpp.obj CMakeFiles/gestor_de_contacots.dir/tree/Tree.cpp.obj CMakeFiles/gestor_de_contacots.dir/tree/ControladorArbol.cpp.obj CMakeFiles/gestor_de_contacots.dir/control-archivo/ControlArchivo.cpp.obj CMakeFiles/gestor_de_contacots.dir/contact-manager/ContanctManager.cpp.obj CMakeFiles/gestor_de_contacots.dir/control-data/ControlDataInput.cpp.obj CMakeFiles/gestor_de_contacots.dir/list/List.cpp.obj CMakeFiles/gestor_de_contacots.dir/report/Report.cpp.obj CMakeFiles/gestor_de_contacots.dir/log/Log.cpp.obj CMakeFiles/gestor_de_contacots.dir/menu/Menu.cpp.obj CMakeFiles/gestor_de_contacots.dir/log/ListLog.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\gestor_de_contacots.dir

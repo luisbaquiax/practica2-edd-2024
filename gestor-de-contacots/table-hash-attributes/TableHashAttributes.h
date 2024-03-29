@@ -17,13 +17,17 @@ public:
     ItemHsAttributes **itemsAttributes;
 
     int size;
+    int contadorId;
 
     void push(std::string key, Tree *&tree);
+
     void setSize(int &number);
 
     void inicializar(int &tam);
 
     ItemHsAttributes *getItemAttribute(std::string &nameAttribute);
+
+    ItemHsAttributes *getItemAttributeByID(int id);
 
 };
 

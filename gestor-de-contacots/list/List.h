@@ -7,6 +7,7 @@
 
 #include <iostream>
 #include "../atributo/Atributo.h"
+
 class List {
 public:
     Atributo *initial;
@@ -21,6 +22,10 @@ public:
     bool isEmpity();
 
     void printList();
+
+    Atributo *getByIndex(int index);
+
+    void vaciarLista();
 
 };
 

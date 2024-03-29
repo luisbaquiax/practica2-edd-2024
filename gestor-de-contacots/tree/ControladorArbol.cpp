@@ -164,30 +164,31 @@ void ControladorArbol::rotacionDerechaDerecha(Tree *arbol, Atributo *nodo) {
  * @param conent
  */
 void ControladorArbol::generRecursivo(Atributo *nodo, std::string &conent) {
-    /**
-     // Nodo 1 con valor "A" y ID "n1"
-    n1 [id="n1", label="12-12-12"];
 
-    // Nodo 2 con valor "A" y ID "n2"
-    n2 [id="n2", label="A"];
-
-    // Enlace entre los nodos
-    n1 -> n2;
-    }
-     */
     if (nodo != nullptr) {
+        nodo->printInfo();
         if (nodo->left != nullptr) {
-            std::string nodoIzquierdo;
-            conent += nodo->valor + "->" + nodo->left->valor;
-            conent += ";\n";
-            nodo->left->printInfo();
+            conent += nodo->getIdString() + "->" + nodo->left->getIdString() + ";\n";
             generRecursivo(nodo->left, conent);
         }
         if (nodo->right != nullptr) {
-            conent += nodo->valor + "->" + nodo->right->valor;
-            conent += ";\n";
-            nodo->right->printInfo();
+            conent += nodo->getIdString() + "->" + nodo->right->getIdString() + ";\n";
             generRecursivo(nodo->right, conent);
+        }
+    }
+}
+
+void ControladorArbol::generarCadenaRecursivo(Atributo *nodo, std::string &conent) {
+    if (nodo != nullptr) {
+        if (nodo->left != nullptr) {
+            conent += nodo->left->getIdString()
+                      + "[id=\"" + nodo->left->getIdString() + "\", label=\"" + nodo->left->valor + "\"];\n";
+            generarCadenaRecursivo(nodo->left, conent);
+        }
+        if (nodo->right != nullptr) {
+            conent += nodo->right->getIdString()
+                      + "[id=\"" + nodo->right->getIdString() + "\", label=\"" + nodo->right->valor + "\"];\n";
+            generarCadenaRecursivo(nodo->right, conent);
         }
     }
 }
@@ -195,13 +196,13 @@ void ControladorArbol::generRecursivo(Atributo *nodo, std::string &conent) {
 std::string ControladorArbol::generarGrapvhiz(Tree *a) {
     std::string content;
     Atributo *aux = a->raiz;
-    content += "digraph ArbolBinario {\n";
-
-    if (aux->left == nullptr && aux->right == nullptr) {
-        content += (aux->valor) + ";\n";
-    }
+    //content += "digraph ArbolBinario {\n";
+    content += aux->getIdString()
+               + "[id=\"" + aux->getIdString() + "\", label=\"" + aux->valor + "\"];\n";
+    //content += aux->getIdString() + ";\n";
+    generarCadenaRecursivo(aux, content);
     generRecursivo(aux, content);
-    content += "}";
+    //content += "}";
     return content;
 }
 

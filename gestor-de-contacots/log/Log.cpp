@@ -3,3 +3,7 @@
 //
 
 #include "Log.h"
+
+std::string Log::getInfo() {
+    return "Fecha y hora: " + fechaHora + "Accion: " + tipoAccion + "\n\n";
+}

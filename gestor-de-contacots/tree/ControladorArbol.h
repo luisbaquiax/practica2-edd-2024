@@ -36,6 +36,8 @@ public:
 
     void generRecursivo(Atributo *nodo, std::string &conent);
 
+    void generarCadenaRecursivo(Atributo *nodo, std::string &conent);
+
     std::string generarGrapvhiz(Tree *a);
 
     void liberarMemrorira(Tree *arbol);

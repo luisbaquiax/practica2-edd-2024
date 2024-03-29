@@ -1,6 +1,0 @@
-digraph ArbolBinario {
-b->1;
-b->fcc;
-fcc->c;
-fcc->g;
-}

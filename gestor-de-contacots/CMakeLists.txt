@@ -30,6 +30,8 @@ add_executable(gestor_de_contacots main.cpp
         report/Report.h
         log/Log.cpp
         log/Log.h
-        menu/menu.cpp
-        menu/menu.h
+        menu/Menu.cpp
+        menu/Menu.h
+        log/ListLog.cpp
+        log/ListLog.h
 )

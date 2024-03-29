@@ -14,14 +14,19 @@ void TableHashGruoup::push(std::string &key, TableHashAttributes *&tableHashAtri
     int index = f.getIndice(f.valueHash(key), this->tam);
     if (items[index] != nullptr) {
         printf("hubo una colision de grupo\n");
-        for (int i = 0; i < tam; ++i) {
-            if (items[i] == nullptr) {
-                items[i] = new ItemHsGroup();
-                items[i]->key = key;
-                items[i]->tableAtributes = tableHashAtributes;
-                break;
+        if (items[index]->key == key) {
+            std::cout << "El grupo " << key << " ya existe." << std::endl;
+        } else {
+            for (int i = 0; i < tam; ++i) {
+                if (items[i] == nullptr) {
+                    items[i] = new ItemHsGroup();
+                    items[i]->key = key;
+                    items[i]->tableAtributes = tableHashAtributes;
+                    break;
+                }
             }
         }
+
     } else {
         items[index] = new ItemHsGroup();
         items[index]->key = key;

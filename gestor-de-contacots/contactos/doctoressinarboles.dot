@@ -1,0 +1,13 @@
+digraph ArbolBinario {
+doctoresfecha2[id="doctoresfecha2", label="fecha2"];
+doctorescumple[id="doctorescumple", label="cumple"];
+doctorestelefono[id="doctorestelefono", label="telefono"];
+doctoresfecha[id="doctoresfecha", label="fecha"];
+doctoresnombre[id="doctoresnombre", label="nombre"];
+doctores->doctoresfecha2;
+doctores->doctorescumple;
+doctores->doctorestelefono;
+doctores->doctoresfecha;
+doctores->doctoresnombre;
+}
+

@@ -10,6 +10,8 @@
 
 class Tree {
 public:
+    Tree() : raiz(nullptr), id(0), altura(0), idNodo(0) {}
+
     Atributo *raiz;
     FuncionHash f;
     int id;

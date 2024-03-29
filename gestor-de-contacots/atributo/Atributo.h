@@ -25,6 +25,9 @@ public:
     Atributo *right;
     Atributo *father;
     int id;
+    std::string nameGroup;
+    std::string typeName;
+    std::string idString;
     int hijosDerecho;
     int hijosIzquierdo;
     int factorEquilibrio;
@@ -43,6 +46,10 @@ public:
         hijosIzquierdo = 0;
         factorEquilibrio = 0;
         id = 0;
+        nameGroup = "";
+        typeName = "";
+        tipo = "";
+        valor = "";
     };
 
     Atributo(const std::string &tipo,
@@ -53,15 +60,23 @@ public:
             right(nullptr),
             next(nullptr),
             previous(nullptr),
-            father(nullptr) {
+            father(nullptr),
+            nextList(nullptr),
+            previousList(nullptr) {
         hijosDerecho = 0;
         hijosIzquierdo = 0;
         factorEquilibrio = 0;
         id = 0;
+        nameGroup = "";
+        typeName = "";
     }
 
     std::string getString();
+
     std::string getInfoNextPrevious();
+
+    std::string getIdString();
+
     void printInfo();
 };
 

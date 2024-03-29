@@ -4,6 +4,7 @@
 
 #ifndef GESTOR_DE_CONTACOTS_CONTANCTMANAGER_H
 #define GESTOR_DE_CONTACOTS_CONTANCTMANAGER_H
+
 #include <string>
 
 #include "../table-hash-gruoups/TableHashGruoup.h"
@@ -11,6 +12,8 @@
 #include "../tree/ControladorArbol.h"
 #include "../list/List.h"
 #include "../control-archivo/ControlArchivo.h"
+#include "../log/ListLog.h"
+#include "../log/Log.h"
 
 class ContanctManager {
 private:
@@ -24,9 +27,9 @@ public:
     ControladorArbol controladorArbol;
 
     ControlArchivo controlArchivo;
+    ListLog listLog;
 
     void createGruop(std::string &nameGruop, Atributo **&listAtributos, int tam);
-
 
     void insertContact(std::string &nameGruop, Atributo **&listAtributos, int tam);
 
@@ -37,6 +40,24 @@ public:
     void generateFileByGruop(std::string &nameGruop);
 
     void generarFileRecursive(Atributo *nodo, std::string &nameGroup);
+
+    void generateLabelsGroups(std::string &content);
+
+    void generateLabelsAttributes(std::string &content, std::string &nameGroup);
+
+    void generarEnlaceGruposAtributos(std::string &content, std::string &nameGroup);
+
+    void generarEnlaceGruposAtributosAll(std::string &content);
+
+    void generarEnlaceArboles(std::string &content, std::string &nameGroup);
+
+    std::string generarGraphizUnGrupo(std::string &nameGroup);
+
+    std:: string generarGraphizUnGrupoExceptoArboles(std::string &nameGroup);
+
+    std::string generarGraphizTodosGrupos();
+
+    std::string getFechaHora();
 };
 
 

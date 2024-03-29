@@ -6,7 +6,7 @@
 #include <iostream>
 
 std::string Atributo::getString() {
-    return "id: "+std::to_string(id) + " Tipo: " + tipo + " Valor: " + valor
+    return "id: " + std::to_string(id) + " Tipo: " + tipo + " Valor: " + valor
            + " Factor equilibrio: " + std::to_string(factorEquilibrio);
 }
 
@@ -28,4 +28,8 @@ std::string Atributo::getInfoNextPrevious() {
         aux2 = aux2->previous;
     }
     return content;
+}
+
+std::string Atributo::getIdString() {
+    return nameGroup + std::to_string(id) + tipo;
 }
