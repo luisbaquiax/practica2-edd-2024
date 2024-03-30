@@ -1,0 +1,41 @@
+digraph ArbolBinario {
+amigosedad[id="amigosedad", label="edad"];
+amigosapellido[id="amigosapellido", label="apellido"];
+amigosfecha[id="amigosfecha", label="fecha"];
+amigosotraFecha[id="amigosotraFecha", label="otraFecha"];
+amigosnombre[id="amigosnombre", label="nombre"];
+amigos->amigosedad;
+amigos->amigosapellido;
+amigos->amigosfecha;
+amigos->amigosotraFecha;
+amigos->amigosnombre;
+amigosedad->amigos1edad;
+amigos1edad[id="amigos1edad", label="27"];
+amigos3edad[id="amigos3edad", label="25"];
+amigos2edad[id="amigos2edad", label="28"];
+amigos1edad->amigos3edad;
+amigos1edad->amigos2edad;
+amigosapellido->amigos1apellido;
+amigos1apellido[id="amigos1apellido", label="baquiax1"];
+amigos2apellido[id="amigos2apellido", label="baquiax1"];
+amigos3apellido[id="amigos3apellido", label="diaz"];
+amigos1apellido->amigos2apellido;
+amigos1apellido->amigos3apellido;
+amigosfecha->amigos1fecha;
+amigos1fecha[id="amigos1fecha", label="12-12-12"];
+amigos3fecha[id="amigos3fecha", label="12-12-11"];
+amigos2fecha[id="amigos2fecha", label="2-12-12"];
+amigos1fecha->amigos3fecha;
+amigos1fecha->amigos2fecha;
+amigosotraFecha->amigos2otraFecha;
+amigos2otraFecha[id="amigos2otraFecha", label="12-12-10"];
+amigos3otraFecha[id="amigos3otraFecha", label="12-12-10"];
+amigos2otraFecha->amigos3otraFecha;
+amigosnombre->amigos2nombre;
+amigos2nombre[id="amigos2nombre", label="luis2"];
+amigos1nombre[id="amigos1nombre", label="luis1"];
+amigos3nombre[id="amigos3nombre", label="luis3"];
+amigos2nombre->amigos1nombre;
+amigos2nombre->amigos3nombre;
+}
+

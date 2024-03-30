@@ -45,7 +45,7 @@ void Menu::menuPrincipapl() {
 }
 
 void Menu::createGruoup() {
-    std::string comando;
+    /*std::string comando;
 
     std::cout << "Ingresa comando para crear grupo>";
     std::getline(std::cin >> std::ws, comando);
@@ -66,9 +66,9 @@ void Menu::createGruoup() {
     delete[] list;
     dataInput.listaAtributos.vaciarLista();
     dataInput.lista.vaciarLista();
-    dataInput.nameGruop = "";
+    dataInput.nameGruop = "";*/
 
-    /*Atributo *nodo1 = new Atributo("DATE", "fecha");
+    Atributo *nodo1 = new Atributo("DATE", "fecha");
 
     Atributo *nodo2 = new Atributo("STRING", "nombre");
 
@@ -96,11 +96,11 @@ void Menu::createGruoup() {
 
     contanctManager.createGruop(key, list, tam);
     contanctManager.createGruop(key2, list2, tam);
-    contanctManager.printInfoGroup(key);*/
+    contanctManager.printInfoGroup(key);
 }
 
 void Menu::insertContact() {
-    std::string comando;
+   /* std::string comando;
 
     std::cout << "Ingresa comando para registrar contacto>";
     std::getline(std::cin >> std::ws, comando);
@@ -134,9 +134,9 @@ void Menu::insertContact() {
     delete[] list;
     dataInput.listaAtributos.vaciarLista();
     dataInput.lista.vaciarLista();
-    dataInput.nameGruop = "";
+    dataInput.nameGruop = "";*/
 
-    /* std::string key = "amigos";
+     std::string key = "amigos";
      std::string key2 = "doctores";
      int tam = 5;
 
@@ -169,7 +169,7 @@ void Menu::insertContact() {
          contactos3[i]->printInfo();
      }
      contanctManager.insertContact(key, contactos3, tam);
-     contanctManager.printInfoGroup(key);*/
+     contanctManager.printInfoGroup(key);
 }
 
 void Menu::searchContact() {
