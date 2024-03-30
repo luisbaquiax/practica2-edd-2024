@@ -1,40 +1,13 @@
-Fecha y hora: Wed Mar 27 21:24:15 2024
+Fecha y hora: Sat Mar 30 00:10:07 2024
+Accion: Creacion del grupo medicos
+
+Fecha y hora: Sat Mar 30 00:10:25 2024
 Accion: Creacion del grupo amigos
 
-Fecha y hora: Wed Mar 27 21:24:15 2024
-Accion: Creacion del grupo doctores
-
-Fecha y hora: Wed Mar 27 21:24:16 2024
+Fecha y hora: Sat Mar 30 00:10:43 2024
 Accion: Insercion de contacto en el grupo amigos
 
-Fecha y hora: Wed Mar 27 21:24:16 2024
-Accion: Insercion de contacto en el grupo amigos
-
-Fecha y hora: Wed Mar 27 21:24:16 2024
-Accion: Insercion de contacto en el grupo amigos
-
-Fecha y hora: Wed Mar 27 21:24:26 2024
+Fecha y hora: Sat Mar 30 00:11:11 2024
 Accion: Busqueda de contacto en el grupo amigos
-
-Fecha y hora: Wed Mar 27 21:24:36 2024
-Accion: Exportacion de grafica de toda la estructura
-
-Fecha y hora: Wed Mar 27 21:24:36 2024
-Accion: Generar grafica de toda la estructura 
-
-Fecha y hora: Wed Mar 27 21:24:43 2024
-Accion: Exportacion de grafica del grupo sin arbolesamigos
-
-Fecha y hora: Wed Mar 27 21:24:43 2024
-Accion: Crear grafica de estructura del grupo amigos
-
-Fecha y hora: Wed Mar 27 21:24:49 2024
-Accion: Exportacion de grafica del grupo con arbolesamigos
-
-Fecha y hora: Wed Mar 27 21:25:03 2024
-Accion: Exportacion de contactos del grupo amigos
-
-Fecha y hora: Wed Mar 27 21:25:03 2024
-Accion: Importacion de contactos del grupo amigos
 
 

@@ -47,24 +47,6 @@ void ContanctManager::createGruop(std::string &nameGruop, Atributo **&listAtribu
         Log *log = new Log(getFechaHora(), "Creacion del grupo " + nameGruop);
         listLog.insert(log);
     }
-    printf("Grupos: \n");
-    for (int i = 0; i < hashGruoup.tam; ++i) {
-        if (hashGruoup.items[i] != nullptr) {
-            std::cout << "Grupo: " << hashGruoup.items[i]->key << std::endl;
-            for (int j = 0; j < hashGruoup.items[i]->tamNamesAttributes; ++j) {
-                std::cout << "Atributo> " << *hashGruoup.items[i]->listNameAttributes[j] << std::endl;
-            }
-        }
-    }
-    printf("Grupo: %s\n", nameGruop.c_str());
-    TableHashAttributes *t = hashGruoup.getItemGroup(nameGruop)->tableAtributes;
-    for (int j = 0; j < t->size; ++j) {
-        if (t->itemsAttributes[j] != nullptr) {
-            std::cout << "key del arbol: "
-                      // << t->itemsAttributes[j]->key << std::endl;
-                      << hashGruoup.getItemGroup(nameGruop)->tableAtributes->itemsAttributes[j]->key << std::endl;
-        }
-    }
 }
 
 TableHashAttributes *ContanctManager::getTableAttributes(Atributo **&listAttributes, int tam) {
@@ -82,25 +64,6 @@ void ContanctManager::insertContact(std::string &nameGruop, Atributo **&listAtri
     std::cout << "insertando en el grupo: " << nameGruop << std::endl;
     printf("\n");
 
-    printf("Grupos: \n");
-    for (int i = 0; i < hashGruoup.tam; ++i) {
-        if (hashGruoup.items[i] != nullptr) {
-            std::cout << "Grupo: " << hashGruoup.items[i]->key << std::endl;
-            for (int j = 0; j < hashGruoup.items[i]->tamNamesAttributes; ++j) {
-                std::cout << "Atributo> " << *hashGruoup.items[i]->listNameAttributes[j] << std::endl;
-            }
-        }
-    }
-    printf("Grupo: \n");
-    TableHashAttributes *t = hashGruoup.getItemGroup(nameGruop)->tableAtributes;
-    int index = 0;
-    for (int j = 0; j < t->size; ++j) {
-        if (t->itemsAttributes[j] != nullptr) {
-            std::cout << "key del arbol: "
-                      << hashGruoup.getItemGroup(nameGruop)->tableAtributes->itemsAttributes[j]->key << std::endl;
-        }
-    }
-
     //enlazamos los nodos tanto su siguiente y su anterior
     for (int i = 0; i < tam - 1; ++i) {
         listAtributos[i]->next = listAtributos[i + 1];
@@ -115,11 +78,6 @@ void ContanctManager::insertContact(std::string &nameGruop, Atributo **&listAtri
         for (int i = 0; i < tam; ++i) {
             //agregamos el grupo al que pertenece
             listAtributos[i]->nameGroup = nameGruop;
-
-            //establecemos el tipo de dato al que pertenece
-            /*const std::string tipo = hashGruoup.getItemGroup(nameGruop)->tableAtributes->getItemAttributeByID(
-                    (i + 1))->key;
-            listAtributos[i]->tipo = tipo;*/
 
             //creamos un objeto Atributo para agregar al arbol correspondiente
             Atributo *nuevo = listAtributos[i];
@@ -310,15 +268,19 @@ void ContanctManager::generarEnlaceGruposAtributosAll(std::string &content) {
 }
 
 void ContanctManager::generarEnlaceArboles(std::string &content, std::string &nameGroup) {
-    for (int i = 0; i < hashGruoup.getItemGroup(nameGroup)->tamNamesAttributes; ++i) {
-        content.append(nameGroup);
-        std::string *auxi = hashGruoup.getItemGroup(nameGroup)->listNameAttributes[i];
-        content.append(*auxi);
-        content.append("->");
-        Tree *arbol = hashGruoup.getItemGroup(nameGroup)->tableAtributes->getItemAttribute(*auxi)->tree;
-        Atributo *raiz = arbol->raiz;
-        content.append(raiz->getIdString() + ";\n");
-        content.append(controladorArbol.generarGrapvhiz(arbol));
+    for (int i = 0; i < hashGruoup.getItemGroup(nameGroup)->tableAtributes->size; ++i) {
+        if (hashGruoup.getItemGroup(nameGroup)->tableAtributes->itemsAttributes[i] != nullptr) {
+            content.append(nameGroup);
+
+            content.append(hashGruoup.getItemGroup(nameGroup)->tableAtributes->itemsAttributes[i]->key);
+            content.append("->");
+            Tree *arbol = hashGruoup.getItemGroup(nameGroup)->tableAtributes->getItemAttribute(
+                    hashGruoup.getItemGroup(nameGroup)
+                            ->tableAtributes->itemsAttributes[i]->key)->tree;
+            Atributo *raiz = arbol->raiz;
+            content.append(raiz->getIdString() + ";\n");
+            content.append(controladorArbol.generarGrapvhiz(arbol));
+        }
     }
 }
 
@@ -339,7 +301,6 @@ std::string ContanctManager::generarGraphizUnGrupo(std::string &nameGrup) {
 std::string ContanctManager::generarGraphizUnGrupoExceptoArboles(std::string &nameGroup) {
     std::string content;
     content.append("digraph ArbolBinario {\n");
-    std::string *key = hashGruoup.getItemGroup(nameGroup)->listNameAttributes[0];
     int size = hashGruoup.getItemGroup(nameGroup)->tableAtributes->size;
     if (size > 0) {
         generateLabelsAttributes(content, nameGroup);
@@ -380,4 +341,31 @@ std::string ContanctManager::getFechaHora() {
     auto now = std::chrono::system_clock::now();
     std::time_t endTime = std::chrono::system_clock::to_time_t(now);
     return ctime(&endTime);
+}
+
+void ContanctManager::printInfoGroup(std::string &nameGroup) {
+    printf("Grupos: \n");
+    for (int i = 0; i < hashGruoup.tam; ++i) {
+        if (hashGruoup.items[i] != nullptr) {
+            std::cout << "Grupo: " << hashGruoup.items[i]->key << std::endl;
+            for (int j = 0; j < hashGruoup.getItemGroup(hashGruoup.items[i]->key)->tableAtributes->size; ++j) {
+                //std::cout << "Atributo> " << *hashGruoup.items[i]->listNameAttributes[j] << std::endl;
+                if (hashGruoup.getItemGroup(hashGruoup.items[i]->key)->tableAtributes->itemsAttributes[j] != nullptr) {
+                    std::cout << "Atributo> "
+                              << hashGruoup.getItemGroup(
+                                      hashGruoup.items[i]->key)->tableAtributes->itemsAttributes[j]->key << std::endl;
+                }
+            }
+        }
+    }
+    std::cout << "Grupo: " << nameGroup << std::endl;
+    TableHashAttributes *t = hashGruoup.getItemGroup(nameGroup)->tableAtributes;
+    for (int j = 0; j < t->size; ++j) {
+        if (t->itemsAttributes[j] != nullptr) {
+            std::cout << "key del arbol: "
+                      << hashGruoup.getItemGroup(nameGroup)->tableAtributes->itemsAttributes[j]->key
+                      << " indice: " << hashGruoup.getItemGroup(nameGroup)->tableAtributes->itemsAttributes[j]->id
+                      << std::endl;
+        }
+    }
 }

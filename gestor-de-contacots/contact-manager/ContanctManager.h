@@ -58,6 +58,8 @@ public:
     std::string generarGraphizTodosGrupos();
 
     std::string getFechaHora();
+
+    void printInfoGroup(std::string &nameGroup);
 };
 
 

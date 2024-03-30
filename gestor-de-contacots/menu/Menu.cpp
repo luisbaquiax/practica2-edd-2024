@@ -45,26 +45,28 @@ void Menu::menuPrincipapl() {
 }
 
 void Menu::createGruoup() {
-     std::string comando;
+    std::string comando;
 
-     std::cout << "Ingresa comando para crear grupo>";
-     std::getline(std::cin >> std::ws, comando);
-     std::cout << "\nComando ingresado: " << comando << std::endl;
-     //analizamos la cadena de entrada
-     dataInput.analizarContenido(comando);
-     dataInput.establecerAcciones();
-     //creamos un array de atributos
-     Atributo **list = new Atributo *[dataInput.listaAtributos.size];
-     //convertimos la lista atributos a un array
-     for (int i = 0; i < dataInput.listaAtributos.size; ++i) {
-         list[i] = dataInput.listaAtributos.getByIndex(i);
-     }
-     //creamos el grupo
-     contanctManager.createGruop(dataInput.nameGruop, list, dataInput.listaAtributos.size);
-     delete[] list;
-     dataInput.listaAtributos.vaciarLista();
-     dataInput.lista.vaciarLista();
-     dataInput.nameGruop = "";
+    std::cout << "Ingresa comando para crear grupo>";
+    std::getline(std::cin >> std::ws, comando);
+    std::cout << "\nComando ingresado: " << comando << std::endl;
+    //analizamos la cadena de entrada
+    dataInput.analizarContenido(comando);
+    dataInput.establecerAcciones();
+    //creamos un array de atributos
+    Atributo **list = new Atributo *[dataInput.listaAtributos.size];
+    //convertimos la lista atributos a un array
+    for (int i = 0; i < dataInput.listaAtributos.size; ++i) {
+        list[i] = dataInput.listaAtributos.getByIndex(i);
+    }
+    //creamos el grupo
+    string nameGroup = dataInput.nameGruop;
+    contanctManager.createGruop(nameGroup, list, dataInput.listaAtributos.size);
+    contanctManager.printInfoGroup(dataInput.nameGruop);
+    delete[] list;
+    dataInput.listaAtributos.vaciarLista();
+    dataInput.lista.vaciarLista();
+    dataInput.nameGruop = "";
 
     /*Atributo *nodo1 = new Atributo("DATE", "fecha");
 
@@ -90,70 +92,84 @@ void Menu::createGruoup() {
     list2[3] = new Atributo("NUMBER", "fecha2");
     list2[4] = new Atributo("DATE", "cumple");
     std::string key = "amigos";
-    std::string key2 = "doctores";
+    std::string key2 = "profes";
 
     contanctManager.createGruop(key, list, tam);
-    contanctManager.createGruop(key2, list2, tam);*/
+    contanctManager.createGruop(key2, list2, tam);
+    contanctManager.printInfoGroup(key);*/
 }
 
 void Menu::insertContact() {
-     std::string comando;
+    std::string comando;
 
-     std::cout << "Ingresa comando para registrar contacto>";
-     std::getline(std::cin >> std::ws, comando);
-     std::cout << "\nComando ingresado: " << comando << std::endl;
-     //analizamos la cadena de entrada
-     dataInput.analizarContenido(comando);
-     dataInput.establecerAcciones();
+    std::cout << "Ingresa comando para registrar contacto>";
+    std::getline(std::cin >> std::ws, comando);
+    std::cout << "\nComando ingresado: " << comando << std::endl;
+    //analizamos la cadena de entrada
+    dataInput.analizarContenido(comando);
+    dataInput.establecerAcciones();
 
-     std::cout << "\nNombre grupo: " << dataInput.nameGruop << std::endl;
-     //creamos el array de atributos del contacto
-     Atributo **list = new Atributo *[dataInput.listaAtributos.size];
+    std::cout << "\nNombre grupo: " << dataInput.nameGruop << std::endl;
+    //creamos el array de atributos del contacto
+    Atributo **list = new Atributo *[dataInput.listaAtributos.size];
 
-     printf("Datos del contacto a ingresar: \n");
-     for (int i = 0; i < dataInput.listaAtributos.size; ++i) {
-         std::cout << dataInput.listaAtributos.getByIndex(i)->getInfoNextPrevious() << std::endl;
+    TableHashAttributes *t = contanctManager.hashGruoup.getItemGroup(dataInput.nameGruop)->tableAtributes;
+    for (int i = 0; i < dataInput.listaAtributos.size; ++i) {
+        for (int j = 0; j < t->size; ++j) {
+            if (t->itemsAttributes[j] != nullptr) {
+                if ((i + 1) == t->itemsAttributes[j]->id) {
+                    dataInput.listaAtributos.getByIndex(i)->tipo = t->itemsAttributes[j]->key;
+                    break;
+                }
+            }
+        }
+    }
+    for (int i = 0; i < dataInput.listaAtributos.size; ++i) {
+        list[i] = dataInput.listaAtributos.getByIndex(i);
+    }
+
+    //ingresarmos loa tributos del contacto
+    contanctManager.insertContact(dataInput.nameGruop, list, dataInput.listaAtributos.size);
+    //vaciamos las listas correspondientes
+    delete[] list;
+    dataInput.listaAtributos.vaciarLista();
+    dataInput.lista.vaciarLista();
+    dataInput.nameGruop = "";
+
+    /* std::string key = "amigos";
+     std::string key2 = "doctores";
+     int tam = 5;
+
+     Atributo **contactos = new Atributo *[tam];
+     contactos[0] = new Atributo("fecha", "12-12-12");
+     contactos[1] = new Atributo("nombre", "luis1");
+     contactos[2] = new Atributo("apellido", "baquiax1");
+     contactos[3] = new Atributo("edad", "27");
+     contactos[4] = new Atributo("otraFecha", "12-12-10");
+
+     contanctManager.insertContact(key, contactos, tam);
+     Atributo **contactos2 = new Atributo *[tam];
+     contactos2[0] = new Atributo("fecha", "2-12-12");
+     contactos2[1] = new Atributo("nombre", "luis2");
+     contactos2[2] = new Atributo("apellido", "baquiax1");
+     contactos2[3] = new Atributo("edad", "28");
+     contactos2[4] = new Atributo("otraFecha", "12-12-10");
+
+     contanctManager.insertContact(key, contactos2, tam);
+
+     Atributo **contactos3 = new Atributo *[tam];
+     contactos3[0] = new Atributo("fecha", "12-12-11");
+     contactos3[1] = new Atributo("nombre", "luis3");
+     contactos3[2] = new Atributo("apellido", "diaz");
+     contactos3[3] = new Atributo("edad", "25");
+     contactos3[4] = new Atributo("otraFecha", "12-12-10");
+     for (int i = 0; i < tam; ++i) {
+         contactos[i]->printInfo();
+         contactos2[i]->printInfo();
+         contactos3[i]->printInfo();
      }
-     //agreamos
-     contanctManager.insertContact(dataInput.nameGruop, list, dataInput.listaAtributos.size);
-
-     dataInput.listaAtributos.vaciarLista();
-     dataInput.lista.vaciarLista();
-     dataInput.nameGruop = "";
-
-   /* std::string key = "amigos";
-    std::string key2 = "doctores";
-    int tam = 5;
-
-    Atributo **contactos = new Atributo *[tam];
-    contactos[0] = new Atributo("fecha", "12-12-12");
-    contactos[1] = new Atributo("nombre", "luis1");
-    contactos[2] = new Atributo("apellido", "baquiax1");
-    contactos[3] = new Atributo("edad", "27");
-    contactos[4] = new Atributo("otraFecha", "12-12-10");
-
-    contanctManager.insertContact(key, contactos, tam);
-    Atributo **contactos2 = new Atributo *[tam];
-    contactos2[0] = new Atributo("fecha", "2-12-12");
-    contactos2[1] = new Atributo("nombre", "luis2");
-    contactos2[2] = new Atributo("apellido", "baquiax1");
-    contactos2[3] = new Atributo("edad", "28");
-    contactos2[4] = new Atributo("otraFecha", "12-12-10");
-
-    contanctManager.insertContact(key, contactos2, tam);
-
-    Atributo **contactos3 = new Atributo *[tam];
-    contactos3[0] = new Atributo("fecha", "12-12-11");
-    contactos3[1] = new Atributo("nombre", "luis3");
-    contactos3[2] = new Atributo("apellido", "diaz");
-    contactos3[3] = new Atributo("edad", "25");
-    contactos3[4] = new Atributo("otraFecha", "12-12-10");
-   *//* for (int i = 0; i < tam; ++i) {
-        contactos[i]->printInfo();
-        contactos2[i]->printInfo();
-        contactos3[i]->printInfo();
-    }*//*
-    contanctManager.insertContact(key, contactos3, tam);*/
+     contanctManager.insertContact(key, contactos3, tam);
+     contanctManager.printInfoGroup(key);*/
 }
 
 void Menu::searchContact() {

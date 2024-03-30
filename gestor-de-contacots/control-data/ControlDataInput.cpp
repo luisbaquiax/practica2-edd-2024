@@ -84,11 +84,11 @@ void ControlDataInput::establecerAcciones() {
         atributo->tipo = lista.getByIndex(5)->valor;
         atributo->valor = lista.getByIndex(6)->valor;
     }
-    printf("imprimiento lista....\n");
-    lista.printList();
-    printf("imprimiento listaAtributos....\n");
-    listaAtributos.printList();
-    printf("...\n");
+    /* printf("imprimiento lista....\n");
+     lista.printList();
+     printf("imprimiento listaAtributos....\n");
+     listaAtributos.printList();
+     printf("...\n");*/
 }
 
 
