@@ -76,11 +76,13 @@ ItemHsAttributes *TableHashAttributes::getItemAttribute(std::string &nameAttribu
     return itemHsAttributes;
 }
 
-ItemHsAttributes *TableHashAttributes::getItemAttributeByID(int id) {
+ItemHsAttributes *TableHashAttributes::getItemAttribute() {
     for (int i = 0; i < size; ++i) {
-        if (itemsAttributes[i]->id == id) {
+        if (itemsAttributes[i] != nullptr) {
             return itemsAttributes[i];
         }
     }
     return nullptr;
 }
+
+

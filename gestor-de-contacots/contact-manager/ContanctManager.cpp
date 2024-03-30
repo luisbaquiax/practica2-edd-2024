@@ -158,8 +158,8 @@ void ContanctManager::generateFileByGruop(std::string &nameGruop) {
         Log *log = new Log(getFechaHora(), "Exportacion de contactos del grupo " + nameGruop);
         listLog.insert(log);
 
-        auto *listaNames = itemHsGroup->listNameAttributes;
-        Tree *arbol = itemHsGroup->tableAtributes->getItemAttribute(*listaNames[0])->tree;
+        //Tree *arbol = itemHsGroup->tableAtributes->getItemAttribute(*listaNames[0])->tree;
+        Tree *arbol = itemHsGroup->tableAtributes->getItemAttribute()->tree;
         Atributo *auxi = arbol->raiz;
 
         controlArchivo.generarCarpeta(nameGruop);

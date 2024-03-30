@@ -27,7 +27,7 @@ public:
 
     ItemHsAttributes *getItemAttribute(std::string &nameAttribute);
 
-    ItemHsAttributes *getItemAttributeByID(int id);
+    ItemHsAttributes *getItemAttribute();
 
 };
 
