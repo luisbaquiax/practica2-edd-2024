@@ -45,7 +45,7 @@ void Menu::menuPrincipapl() {
 }
 
 void Menu::createGruoup() {
-     std::string comando;
+    /* std::string comando;
 
      std::cout << "Ingresa comando para crear grupo>";
      std::getline(std::cin >> std::ws, comando);
@@ -64,9 +64,9 @@ void Menu::createGruoup() {
      delete[] list;
      dataInput.listaAtributos.vaciarLista();
      dataInput.lista.vaciarLista();
-     dataInput.nameGruop = "";
+     dataInput.nameGruop = "";*/
 
-    /*Atributo *nodo1 = new Atributo("DATE", "fecha");
+    Atributo *nodo1 = new Atributo("DATE", "fecha");
 
     Atributo *nodo2 = new Atributo("STRING", "nombre");
 
@@ -90,38 +90,38 @@ void Menu::createGruoup() {
     list2[3] = new Atributo("NUMBER", "fecha2");
     list2[4] = new Atributo("DATE", "cumple");
     std::string key = "amigos";
-    std::string key2 = "doctores";
+    std::string key2 = "amigos";
 
     contanctManager.createGruop(key, list, tam);
-    contanctManager.createGruop(key2, list2, tam);*/
+    contanctManager.createGruop(key2, list2, tam);
 }
 
 void Menu::insertContact() {
-     std::string comando;
+    /*std::string comando;
 
-     std::cout << "Ingresa comando para registrar contacto>";
-     std::getline(std::cin >> std::ws, comando);
-     std::cout << "\nComando ingresado: " << comando << std::endl;
-     //analizamos la cadena de entrada
-     dataInput.analizarContenido(comando);
-     dataInput.establecerAcciones();
+    std::cout << "Ingresa comando para registrar contacto>";
+    std::getline(std::cin >> std::ws, comando);
+    std::cout << "\nComando ingresado: " << comando << std::endl;
+    //analizamos la cadena de entrada
+    dataInput.analizarContenido(comando);
+    dataInput.establecerAcciones();
 
-     std::cout << "\nNombre grupo: " << dataInput.nameGruop << std::endl;
-     //creamos el array de atributos del contacto
-     Atributo **list = new Atributo *[dataInput.listaAtributos.size];
+    std::cout << "\nNombre grupo: " << dataInput.nameGruop << std::endl;
+    //creamos el array de atributos del contacto
+    Atributo **list = new Atributo *[dataInput.listaAtributos.size];
 
-     printf("Datos del contacto a ingresar: \n");
-     for (int i = 0; i < dataInput.listaAtributos.size; ++i) {
-         std::cout << dataInput.listaAtributos.getByIndex(i)->getInfoNextPrevious() << std::endl;
-     }
-     //agreamos
-     contanctManager.insertContact(dataInput.nameGruop, list, dataInput.listaAtributos.size);
+    printf("Datos del contacto a ingresar: \n");
+    for (int i = 0; i < dataInput.listaAtributos.size; ++i) {
+        std::cout << dataInput.listaAtributos.getByIndex(i)->getInfoNextPrevious() << std::endl;
+    }
+    //agreamos
+    contanctManager.insertContact(dataInput.nameGruop, list, dataInput.listaAtributos.size);
 
-     dataInput.listaAtributos.vaciarLista();
-     dataInput.lista.vaciarLista();
-     dataInput.nameGruop = "";
+    dataInput.listaAtributos.vaciarLista();
+    dataInput.lista.vaciarLista();
+    dataInput.nameGruop = "";*/
 
-   /* std::string key = "amigos";
+    std::string key = "amigos";
     std::string key2 = "doctores";
     int tam = 5;
 
@@ -148,12 +148,12 @@ void Menu::insertContact() {
     contactos3[2] = new Atributo("apellido", "diaz");
     contactos3[3] = new Atributo("edad", "25");
     contactos3[4] = new Atributo("otraFecha", "12-12-10");
-   *//* for (int i = 0; i < tam; ++i) {
+    for (int i = 0; i < tam; ++i) {
         contactos[i]->printInfo();
         contactos2[i]->printInfo();
         contactos3[i]->printInfo();
-    }*//*
-    contanctManager.insertContact(key, contactos3, tam);*/
+    }
+    contanctManager.insertContact(key, contactos3, tam);
 }
 
 void Menu::searchContact() {
@@ -181,6 +181,11 @@ void Menu::searchContact() {
 }
 
 void Menu::menuReports() {
+    string grupo = "amigos";
+    string nombre = "nombre";
+    //Tree *arbol = contanctManager.hashGruoup.getItemGroup(grupo)->tableAtributes->getItemAttribute(nombre)->tree;
+    //contanctManager.controladorArbol.printInformacion(arbol);
+
     int opcion = 0;
     do {
         printf("                  [ Reportes ]\n");
