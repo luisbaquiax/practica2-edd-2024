@@ -20,7 +20,7 @@ public:
     TableHashGruoup();
 
     //functions
-    void push(std::string &key, TableHashAttributes *&tableHashAtributes);
+    void push(std::string key, TableHashAttributes *&tableHashAtributes);
 
     void addColision(std::string &key, TableHashAttributes *&tableHashAtributes);
 

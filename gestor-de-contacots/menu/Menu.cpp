@@ -97,6 +97,7 @@ void Menu::createGruoup() {
     contanctManager.createGruop(key, list, tam);
     contanctManager.createGruop(key2, list2, tam);
     contanctManager.printInfoGroup(key);
+
 }
 
 void Menu::insertContact() {

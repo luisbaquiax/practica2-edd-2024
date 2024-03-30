@@ -9,15 +9,15 @@ TableHashGruoup::TableHashGruoup() {
     iniciliarItems();
 }
 
-void TableHashGruoup::push(std::string &key, TableHashAttributes *&tableHashAtributes) {
+void TableHashGruoup::push(std::string key, TableHashAttributes *&tableHashAtributes) {
     validarDimension();
     int index = f.getIndice(f.valueHash(key), this->tam);
     if (items[index] != nullptr) {
         printf("hubo una colision de grupo\n");
         if (items[index]->key == key) {
             std::cout << "El grupo " << key << " ya existe." << std::endl;
-            return;
         } else {
+            printf("mmmm\n");
             for (int i = 0; i < tam; ++i) {
                 if (items[i] == nullptr) {
                     items[i] = new ItemHsGroup();
@@ -28,11 +28,11 @@ void TableHashGruoup::push(std::string &key, TableHashAttributes *&tableHashAtri
             }
         }
 
+    }else{
+        items[index] = new ItemHsGroup();
+        items[index]->key = key;
+        items[index]->tableAtributes = tableHashAtributes;
     }
-    items[index] = new ItemHsGroup();
-    items[index]->key = key;
-    items[index]->tableAtributes = tableHashAtributes;
-
 }
 
 void TableHashGruoup::addColision(std::string &key, TableHashAttributes *&tableHashAtributes) {
