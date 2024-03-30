@@ -197,6 +197,11 @@ void Menu::searchContact() {
 }
 
 void Menu::menuReports() {
+    std::string amigos = "amigos";
+    string nombre = "nombre";
+    Tree *arbol = contanctManager.hashGruoup.getItemGroup(amigos)->tableAtributes->getItemAttribute(nombre)->tree;
+    contanctManager.controladorArbol.verInformacion(arbol);
+
     int opcion = 0;
     do {
         printf("                  [ Reportes ]\n");

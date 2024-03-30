@@ -44,6 +44,9 @@ public:
 
     void liberarMemoriaNodos(Atributo *nodo);
 
+    void verInformacion(Tree *arbol);
+    void verInformacionRecursivo(Atributo *nodo);
+
 };
 
 

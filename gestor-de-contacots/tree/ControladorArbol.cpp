@@ -213,3 +213,20 @@ void ControladorArbol::liberarMemrorira(Tree *arbol) {
 void ControladorArbol::liberarMemoriaNodos(Atributo *nodo) {
 
 }
+
+void ControladorArbol::verInformacion(Tree *arbol) {
+    Atributo *auxi = arbol->raiz;
+    std::cout << auxi->getInfoNextPrevious();
+    verInformacionRecursivo(auxi);
+}
+
+void ControladorArbol::verInformacionRecursivo(Atributo *nodo) {
+    if (nodo != nullptr) {
+        if (nodo->left != nullptr) {
+            std::cout << nodo->left->getInfoNextPrevious();
+        }
+        if (nodo->right != nullptr) {
+            std::cout << nodo->right->getInfoNextPrevious();
+        }
+    }
+}
