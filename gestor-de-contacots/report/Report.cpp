@@ -13,12 +13,11 @@ void Report::cantidadDatosPorGrupo(std::string &nameGroup, ContanctManager conta
     TableHashGruoup grupos = contanctManager.hashGruoup;
     //verificamos el contenido de la lista de grupos
     if (grupos.getItemGroup(nameGroup) != nullptr) {
-        auto listado = grupos.getItemGroup(nameGroup)->listNameAttributes;
-        for (int j = 0; j < grupos.getItemGroup(nameGroup)->tamNamesAttributes; ++j) {
-            std::string tipo = *listado[j];
-            auto itemAtributes = grupos.getItemGroup(nameGroup)->tableAtributes->getItemAttribute(tipo);
-            Tree *auxi = itemAtributes->tree;
-            cantidad += auxi->idNodo;
+        for (int j = 0; j < grupos.getItemGroup(nameGroup)->tableAtributes->size; ++j) {
+            if (grupos.getItemGroup(nameGroup)->tableAtributes->itemsAttributes[j] != nullptr) {
+                Tree *auxi = grupos.getItemGroup(nameGroup)->tableAtributes->itemsAttributes[j]->tree;
+                cantidad += auxi->idNodo;
+            }
         }
     }
 }
@@ -36,12 +35,11 @@ void Report::cantidadContactosPorGrupo(std::string &nameGroup, ContanctManager c
     TableHashGruoup grupos = contanctManager.hashGruoup;
     //verificamos el contenido de la lista de grupos
     if (grupos.getItemGroup(nameGroup) != nullptr) {
-        auto listado = grupos.getItemGroup(nameGroup)->listNameAttributes;
-        for (int j = 0; j < grupos.getItemGroup(nameGroup)->tamNamesAttributes; ++j) {
-            std::string tipo = *listado[j];
-            auto itemAtributes = grupos.getItemGroup(nameGroup)->tableAtributes->getItemAttribute(tipo);
-            Tree *auxi = itemAtributes->tree;
-            cantidad = auxi->idNodo;
+        for (int j = 0; j < grupos.getItemGroup(nameGroup)->tableAtributes->size; ++j) {
+            if (grupos.getItemGroup(nameGroup)->tableAtributes->itemsAttributes[j] != nullptr) {
+                Tree *auxi = grupos.getItemGroup(nameGroup)->tableAtributes->itemsAttributes[j]->tree;
+                cantidad = auxi->idNodo;
+            }
         }
     }
     std::cout << "Cantidad de contactos del grupo " << nameGroup << ": " << cantidad << std::endl;
@@ -52,6 +50,6 @@ void Report::generarArchivoLog(ContanctManager contanctManager) {
     contanctManager.controlArchivo.generarCarpeta("log-sistema");
     std::string content = contanctManager.listLog.getAllData();
     printf("//----------------------HISTORIAL DEL SISTEMA//----------------------\n");
-    std::cout<<content<<std::endl;
-    contanctManager.controlArchivo.generarArchivos("log-sistema","log.txt",content);
+    std::cout << content << std::endl;
+    contanctManager.controlArchivo.generarArchivos("log-sistema", "log.txt", content);
 }

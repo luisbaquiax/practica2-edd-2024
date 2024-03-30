@@ -16,22 +16,22 @@ void TableHashGruoup::push(std::string &key, TableHashAttributes *&tableHashAtri
         printf("hubo una colision de grupo\n");
         if (items[index]->key == key) {
             std::cout << "El grupo " << key << " ya existe." << std::endl;
+            return;
         } else {
             for (int i = 0; i < tam; ++i) {
                 if (items[i] == nullptr) {
                     items[i] = new ItemHsGroup();
                     items[i]->key = key;
                     items[i]->tableAtributes = tableHashAtributes;
-                    break;
+                    return;
                 }
             }
         }
 
-    } else {
-        items[index] = new ItemHsGroup();
-        items[index]->key = key;
-        items[index]->tableAtributes = tableHashAtributes;
     }
+    items[index] = new ItemHsGroup();
+    items[index]->key = key;
+    items[index]->tableAtributes = tableHashAtributes;
 
 }
 
