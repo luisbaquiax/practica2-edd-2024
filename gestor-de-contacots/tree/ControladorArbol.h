@@ -4,6 +4,7 @@
 
 #ifndef GESTOR_DE_CONTACOTS_CONTROLADORARBOL_H
 #define GESTOR_DE_CONTACOTS_CONTROLADORARBOL_H
+
 #include <string>
 
 #include "../atributo/Atributo.h"
@@ -43,6 +44,10 @@ public:
     void liberarMemrorira(Tree *arbol);
 
     void liberarMemoriaNodos(Atributo *nodo);
+
+    void verInformacion(Tree *arbol);
+
+    void verInformacionRecursivo(Atributo *nodo);
 
 };
 
