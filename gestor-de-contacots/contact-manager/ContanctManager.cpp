@@ -153,25 +153,25 @@ void ContanctManager::searchContactRecursive(Atributo *buscando, Atributo *nodo,
 
 void ContanctManager::generateFileByGruop(std::string &nameGruop) {
     ItemHsGroup *itemHsGroup = hashGruoup.getItemGroup(nameGruop);
+    printf("entrando...\n");
     if (itemHsGroup != nullptr) {
+        printf("verificando...\n");
 
-        Log *log = new Log(getFechaHora(), "Exportacion de contactos del grupo " + nameGruop);
-        listLog.insert(log);
-
-        auto *listaNames = itemHsGroup->listNameAttributes;
-        Tree *arbol = itemHsGroup->tableAtributes->getItemAttribute(*listaNames[0])->tree;
+        //auto *listaNames = itemHsGroup->listNameAttributes;
+        Tree *arbol = itemHsGroup->tableAtributes->getItemAttributeByID(1)->tree;
         Atributo *auxi = arbol->raiz;
-
+        printf("raiz...\n");
         controlArchivo.generarCarpeta(nameGruop);
-
         std::string content;
         std::string name;
         name += std::to_string(auxi->id) + " " + nameGruop + auxi->valor + ".txt";
         content = auxi->getInfoNextPrevious();
-
+        printf("otros...\n");
         controlArchivo.generarArchivos(nameGruop, name, content);
-
         generarFileRecursive(auxi, nameGruop);
+        Log *log = new Log(getFechaHora(), "Exportacion de contactos del grupo " + nameGruop);
+        listLog.insert(log);
+
 
     } else {
         std::cout << "No existe el grupo " << nameGruop << std::endl;
@@ -287,8 +287,8 @@ void ContanctManager::generarEnlaceArboles(std::string &content, std::string &na
 std::string ContanctManager::generarGraphizUnGrupo(std::string &nameGrup) {
     std::string content;
     //content.append("digraph ArbolBinario {\n");
-    std::string *key = hashGruoup.getItemGroup(nameGrup)->listNameAttributes[0];
-    int size = hashGruoup.getItemGroup(nameGrup)->tableAtributes->getItemAttribute(*key)->tree->idNodo;
+    std::string key = hashGruoup.getItemGroup(nameGrup)->tableAtributes->getItemAttributeByID(1)->key;
+    int size = hashGruoup.getItemGroup(nameGrup)->tableAtributes->getItemAttribute(key)->tree->idNodo;
     if (size > 0) {
         generateLabelsAttributes(content, nameGrup);
         generarEnlaceGruposAtributos(content, nameGrup);
@@ -319,8 +319,8 @@ std::string ContanctManager::generarGraphizTodosGrupos() {
     contenido.append(", label=\"GRUPOS\"];\n");
     for (int i = 0; i < hashGruoup.tam; ++i) {
         if (hashGruoup.items[i] != nullptr) {
-            std::string *key = hashGruoup.items[i]->listNameAttributes[0];
-            int size = hashGruoup.items[i]->tableAtributes->getItemAttribute(*key)->tree->idNodo;
+            std::string key = hashGruoup.items[i]->tableAtributes->getItemAttributeByID(1)->key;
+            int size = hashGruoup.items[i]->tableAtributes->getItemAttribute(key)->tree->idNodo;
             generateLabelsAttributes(contenido, hashGruoup.items[i]->key);
             generarEnlaceGruposAtributos(contenido, hashGruoup.items[i]->key);
             if (size > 0) {
@@ -364,7 +364,7 @@ void ContanctManager::printInfoGroup(std::string &nameGroup) {
         if (t->itemsAttributes[j] != nullptr) {
             std::cout << "key del arbol: "
                       << hashGruoup.getItemGroup(nameGroup)->tableAtributes->itemsAttributes[j]->key
-                      << " indice: " << hashGruoup.getItemGroup(nameGroup)->tableAtributes->itemsAttributes[j]->id
+                      << " id: " << hashGruoup.getItemGroup(nameGroup)->tableAtributes->itemsAttributes[j]->id
                       << std::endl;
         }
     }

@@ -45,7 +45,7 @@ void Menu::menuPrincipapl() {
 }
 
 void Menu::createGruoup() {
-    /*std::string comando;
+    std::string comando;
 
     std::cout << "Ingresa comando para crear grupo>";
     std::getline(std::cin >> std::ws, comando);
@@ -66,11 +66,11 @@ void Menu::createGruoup() {
     delete[] list;
     dataInput.listaAtributos.vaciarLista();
     dataInput.lista.vaciarLista();
-    dataInput.nameGruop = "";*/
+    dataInput.nameGruop = "";
 
-    Atributo *nodo1 = new Atributo("DATE", "fecha");
+    /*Atributo *nodo1 = new Atributo("DATE", "fecha");
 
-   /* Atributo *nodo2 = new Atributo("STRING", "nombre");
+    Atributo *nodo2 = new Atributo("STRING", "nombre");
 
     Atributo *nodo3 = new Atributo("STRING", "apellido");
     Atributo *nodo4 = new Atributo("NUMBER", "edad");
@@ -96,8 +96,8 @@ void Menu::createGruoup() {
 
     contanctManager.createGruop(key, list, tam);
     //contanctManager.createGruop(key2, list2, tam);
-    contanctManager.printInfoGroup(key);*/
-
+    contanctManager.printInfoGroup(key);
+*/
 }
 
 void Menu::insertContact() {
@@ -328,6 +328,7 @@ void Menu::exportContacts() {
     string nameGroup;
     cout << "Ingrese el nombre del grupo para exportar sus contactos>";
     cin >> nameGroup;
+    std::cout<<nameGroup<<std::endl;
     contanctManager.generateFileByGruop(nameGroup);
 }
 

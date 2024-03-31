@@ -77,10 +77,15 @@ ItemHsAttributes *TableHashAttributes::getItemAttribute(std::string &nameAttribu
 }
 
 ItemHsAttributes *TableHashAttributes::getItemAttributeByID(int id) {
+    printf("id: %d", id);
     for (int i = 0; i < size; ++i) {
-        if (itemsAttributes[i]->id == id) {
-            return itemsAttributes[i];
+        if(itemsAttributes[i]!= nullptr){
+            if (itemsAttributes[i]->id == id) {
+                std::cout << "key: " << itemsAttributes[i]->key << std::endl;
+                return itemsAttributes[i];
+            }
         }
     }
+    printf("no encontramos nada \n");
     return nullptr;
 }
