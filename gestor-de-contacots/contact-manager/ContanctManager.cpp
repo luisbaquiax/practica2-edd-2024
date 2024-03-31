@@ -69,6 +69,9 @@ void ContanctManager::insertContact(std::string &nameGruop, Atributo **&listAtri
         listAtributos[i]->next = listAtributos[i + 1];
         listAtributos[i + 1]->previous = listAtributos[i];
     }
+    for (int i = 0; i < tam; ++i) {
+        listAtributos[i]->printInfo();
+    }
     TableHashAttributes *tableAttribute = hashGruoup.getItemGroup(nameGruop)->tableAtributes;
     ItemHsGroup *itemHsGroup = hashGruoup.getItemGroup(nameGruop);
 
@@ -100,25 +103,34 @@ void ContanctManager::insertContact(std::string &nameGruop, Atributo **&listAtri
 
 void ContanctManager::searchContact(std::string &nameGruop, Atributo *&buscando) {
     List *listado = new List();
-
     ItemHsGroup *group = hashGruoup.getItemGroup(nameGruop);
 
     if (group != nullptr) {
         ItemHsAttributes *tabAttri = group->tableAtributes->getItemAttribute(buscando->tipo);
         if (tabAttri != nullptr) {
-            std::cout << "Contactos encontrados con "
-                      << buscando->tipo << " = "
-                      << buscando->valor
-                      << " del grupo: " << nameGruop << std::endl;
             Atributo *auxi = tabAttri->tree->raiz;
-            if (auxi->valor == buscando->valor) {
-                listado->addFinal(auxi);
-            }
-            searchContactRecursive(buscando, auxi, listado);
-            Atributo *tem = listado->initial;
-            while (tem != nullptr) {
-                std::cout << tem->getInfoNextPrevious() << std::endl;
-                tem = tem->nextList;
+            if (auxi != nullptr) {
+                printf("----------------Resultado de la busqueda----------------\n");
+                std::cout << "Contactos encontrados con "
+                          << buscando->tipo << " = "
+                          << buscando->valor
+                          << " del grupo: " << nameGruop << std::endl;
+
+                if (auxi->valor == buscando->valor) {
+                    listado->addFinal(auxi);
+                }
+                searchContactRecursive(buscando, auxi, listado);
+                Atributo *tem = listado->initial;
+                while (tem != nullptr) {
+                    std::cout << tem->getInfoNextPrevious() << std::endl;
+                    tem = tem->nextList;
+                }
+            } else {
+                printf("----------------Resultado de la busqueda----------------\n");
+                std::cout << "No se encontro los contactos con "
+                          << buscando->tipo << " = "
+                          << buscando->valor
+                          << " del grupo: " << nameGruop << std::endl;
             }
             Log *log = new Log(getFechaHora(), "Busqueda de contacto en el grupo " + nameGruop);
             listLog.insert(log);
@@ -138,15 +150,15 @@ void ContanctManager::searchContactRecursive(Atributo *buscando, Atributo *nodo,
             if (nodo->left->valor == buscando->valor) {
                 //Atributo *nuevo = nodo->left;
                 list->addFinal(nodo->left);
-                searchContactRecursive(buscando, nodo->left, list);
             }
+            searchContactRecursive(buscando, nodo->left, list);
         }
         if (nodo->right != nullptr) {
             //Atributo *nuevo = nodo->right;
             if (nodo->right->valor == buscando->valor) {
                 list->addFinal(nodo->right);
-                searchContactRecursive(buscando, nodo->right, list);
             }
+            searchContactRecursive(buscando, nodo->right, list);
         }
     }
 }

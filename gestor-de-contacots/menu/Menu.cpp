@@ -101,41 +101,35 @@ void Menu::createGruoup() {
 }
 
 void Menu::insertContact() {
-    /* std::string comando;
+    /*std::string comando;
 
-     std::cout << "Ingresa comando para registrar contacto>";
-     std::getline(std::cin >> std::ws, comando);
-     std::cout << "\nComando ingresado: " << comando << std::endl;
-     //analizamos la cadena de entrada
-     dataInput.analizarContenido(comando);
-     dataInput.establecerAcciones();
+    std::cout << "Ingresa comando para registrar contacto>";
+    std::getline(std::cin >> std::ws, comando);
+    std::cout << "\nComando ingresado: " << comando << std::endl;
+    //analizamos la cadena de entrada
+    dataInput.analizarContenido(comando);
+    dataInput.establecerAcciones();
 
-     std::cout << "\nNombre grupo: " << dataInput.nameGruop << std::endl;
-     //creamos el array de atributos del contacto
-     Atributo **list = new Atributo *[dataInput.listaAtributos.size];
+    std::cout << "\nNombre grupo: " << dataInput.nameGruop << std::endl;
+    //creamos el array de atributos del contacto
+    Atributo **list = new Atributo *[dataInput.listaAtributos.size];
 
-     TableHashAttributes *t = contanctManager.hashGruoup.getItemGroup(dataInput.nameGruop)->tableAtributes;
-     for (int i = 0; i < dataInput.listaAtributos.size; ++i) {
-         for (int j = 0; j < t->size; ++j) {
-             if (t->itemsAttributes[j] != nullptr) {
-                 if ((i + 1) == t->itemsAttributes[j]->id) {
-                     dataInput.listaAtributos.getByIndex(i)->tipo = t->itemsAttributes[j]->key;
-                     break;
-                 }
-             }
-         }
-     }
-     for (int i = 0; i < dataInput.listaAtributos.size; ++i) {
-         list[i] = dataInput.listaAtributos.getByIndex(i);
-     }
+    TableHashAttributes *t = contanctManager.hashGruoup.getItemGroup(dataInput.nameGruop)->tableAtributes;
+    for (int i = 0; i < dataInput.listaAtributos.size; ++i) {
+        dataInput.listaAtributos.getByIndex(i)->tipo = t->getItemAttributeByID((i + 1))->key;
+    }
+    for (int i = 0; i < dataInput.listaAtributos.size; ++i) {
+        list[i] = dataInput.listaAtributos.getByIndex(i);
+    }
 
-     //ingresarmos loa tributos del contacto
-     contanctManager.insertContact(dataInput.nameGruop, list, dataInput.listaAtributos.size);
-     //vaciamos las listas correspondientes
-     delete[] list;
-     dataInput.listaAtributos.vaciarLista();
-     dataInput.lista.vaciarLista();
-     dataInput.nameGruop = "";*/
+    //ingresarmos loa tributos del contacto
+    contanctManager.insertContact(dataInput.nameGruop, list, dataInput.listaAtributos.size);
+    //vaciamos las listas correspondientes
+    //delete[] list;
+    dataInput.listaAtributos.vaciarLista();
+    dataInput.lista.vaciarLista();
+    dataInput.nameGruop = "";*/
+
 
     std::string key = "amigos";
     std::string key2 = "doctores";
@@ -213,6 +207,11 @@ void Menu::menuReports() {
             }
         }
     }
+    printf("----------------------------------------------\n");
+    string name = "amigos";
+    string otraFecha = "nombre";
+    Tree *arbol = contanctManager.hashGruoup.getItemGroup(name)->tableAtributes->getItemAttribute(otraFecha)->tree;
+    //contanctManager.controladorArbol.verInformacion(arbol);
     printf("----------------------------------------------\n");
     int opcion = 0;
     do {
@@ -328,7 +327,7 @@ void Menu::exportContacts() {
     string nameGroup;
     cout << "Ingrese el nombre del grupo para exportar sus contactos>";
     cin >> nameGroup;
-    std::cout<<nameGroup<<std::endl;
+    std::cout << nameGroup << std::endl;
     contanctManager.generateFileByGruop(nameGroup);
 }
 
