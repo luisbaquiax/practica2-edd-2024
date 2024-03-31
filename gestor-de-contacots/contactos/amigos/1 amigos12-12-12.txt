@@ -1,1 +1,0 @@
-fecha: 12-12-12, nombre: luis1, apellido: baquiax1, edad: 27, otraFecha: 12-12-10, 

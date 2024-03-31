@@ -101,7 +101,7 @@ void Menu::createGruoup() {
 }
 
 void Menu::insertContact() {
-    /*std::string comando;
+    std::string comando;
 
     std::cout << "Ingresa comando para registrar contacto>";
     std::getline(std::cin >> std::ws, comando);
@@ -116,22 +116,24 @@ void Menu::insertContact() {
 
     TableHashAttributes *t = contanctManager.hashGruoup.getItemGroup(dataInput.nameGruop)->tableAtributes;
     for (int i = 0; i < dataInput.listaAtributos.size; ++i) {
-        dataInput.listaAtributos.getByIndex(i)->tipo = t->getItemAttributeByID((i + 1))->key;
+        std::string keyCopy = t->getItemAttributeByID((i + 1))->key;
+        dataInput.listaAtributos.getByIndex(i)->tipo = keyCopy;
     }
     for (int i = 0; i < dataInput.listaAtributos.size; ++i) {
-        list[i] = dataInput.listaAtributos.getByIndex(i);
+        list[i] = new Atributo(dataInput.listaAtributos.getByIndex(i)->tipo,
+                               dataInput.listaAtributos.getByIndex(i)->valor);
     }
 
     //ingresarmos loa tributos del contacto
     contanctManager.insertContact(dataInput.nameGruop, list, dataInput.listaAtributos.size);
     //vaciamos las listas correspondientes
-    //delete[] list;
+    delete[] list;
     dataInput.listaAtributos.vaciarLista();
     dataInput.lista.vaciarLista();
-    dataInput.nameGruop = "";*/
+    dataInput.nameGruop = "";
 
 
-    std::string key = "amigos";
+    /*std::string key = "amigos";
     std::string key2 = "doctores";
     int tam = 5;
 
@@ -164,7 +166,7 @@ void Menu::insertContact() {
         contactos3[i]->printInfo();
     }
     contanctManager.insertContact(key, contactos3, tam);
-    contanctManager.printInfoGroup(key);
+    contanctManager.printInfoGroup(key);*/
 }
 
 void Menu::searchContact() {
@@ -195,23 +197,11 @@ void Menu::menuReports() {
     printf("----------------------------------------------\n");
     for (int i = 0; i < contanctManager.hashGruoup.tam; ++i) {
         if (contanctManager.hashGruoup.items[i] != nullptr) {
-            printf(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n");
-            for (int j = 0; j < contanctManager.hashGruoup.items[i]->tableAtributes->size; ++j) {
-                Tree *aux = nullptr;
-                if (contanctManager.hashGruoup.items[i]->tableAtributes->itemsAttributes[j] != nullptr) {
-                    aux = contanctManager.hashGruoup.items[i]->tableAtributes->itemsAttributes[j]->tree;
-                    if (aux->raiz != nullptr) {
-                        contanctManager.controladorArbol.verInformacion(aux);
-                    }
-                }
-            }
+            printf(">>>>> Datos del gruo: %s <<<<<\n", contanctManager.hashGruoup.items[i]->key.c_str());
+            Tree *arbol = contanctManager.hashGruoup.items[i]->tableAtributes->getItemAttributeByID(1)->tree;
+            contanctManager.controladorArbol.verInformacion(arbol);
         }
     }
-    printf("----------------------------------------------\n");
-    string name = "amigos";
-    string otraFecha = "nombre";
-    Tree *arbol = contanctManager.hashGruoup.getItemGroup(name)->tableAtributes->getItemAttribute(otraFecha)->tree;
-    //contanctManager.controladorArbol.verInformacion(arbol);
     printf("----------------------------------------------\n");
     int opcion = 0;
     do {

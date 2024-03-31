@@ -3,3 +3,8 @@
 //
 
 #include "ItemHsAttributes.h"
+#include "iostream"
+
+void ItemHsAttributes::printKeyId() {
+    std::cout << "Id " << id << "key " + key << std::endl;
+}

@@ -1,1 +1,0 @@
-fecha: 12-12-11, nombre: luis3, apellido: diaz, edad: 25, otraFecha: 12-12-10, 

@@ -14,6 +14,8 @@ public:
     std::string key;
     int id;
     Tree *tree;
+
+    void printKeyId();
 };
 
 

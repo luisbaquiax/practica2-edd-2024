@@ -69,26 +69,22 @@ void ContanctManager::insertContact(std::string &nameGruop, Atributo **&listAtri
         listAtributos[i]->next = listAtributos[i + 1];
         listAtributos[i + 1]->previous = listAtributos[i];
     }
-    for (int i = 0; i < tam; ++i) {
-        listAtributos[i]->printInfo();
-    }
     TableHashAttributes *tableAttribute = hashGruoup.getItemGroup(nameGruop)->tableAtributes;
     ItemHsGroup *itemHsGroup = hashGruoup.getItemGroup(nameGruop);
 
     if (tam == itemHsGroup->tamNamesAttributes) {
-
-        printf("ingresando contacto... tamNamesAttributes: %d\n", itemHsGroup->tamNamesAttributes);
+        printf("Ingresando atributos....\n");
         for (int i = 0; i < tam; ++i) {
-            //agregamos el grupo al que pertenece
-            listAtributos[i]->nameGroup = nameGruop;
-
             //creamos un objeto Atributo para agregar al arbol correspondiente
-            Atributo *nuevo = listAtributos[i];
+            Atributo *nuevo = new Atributo(listAtributos[i]->tipo, listAtributos[i]->valor);
+            nuevo->next = listAtributos[i]->next;
+            nuevo->previous = listAtributos[i]->previous;
+            nuevo->nameGroup = nameGruop;
             //imprimimos su informacion
-            listAtributos[i]->printInfo();
+            nuevo->printInfo();
 
             //agregamos los datos al arbol correspondiente
-            controladorArbol.insertar(tableAttribute->getItemAttribute(listAtributos[i]->tipo)->tree, nuevo);
+            controladorArbol.insertar(tableAttribute->getItemAttribute(nuevo->tipo)->tree, nuevo);
             cantidadContactos++;
         }
         Log *log = new Log(getFechaHora(),
