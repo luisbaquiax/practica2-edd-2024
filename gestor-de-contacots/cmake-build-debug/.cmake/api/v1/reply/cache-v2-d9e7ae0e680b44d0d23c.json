@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/Users/Usuario/Desktop/Nueva carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/cmake-build-debug"
+			"value" : "c:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -643,7 +643,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/Usuario/Desktop/Nueva carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -715,7 +715,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/Usuario/Desktop/Nueva carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots"
+			"value" : "C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1363,7 +1363,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/Usuario/Desktop/Nueva carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/cmake-build-debug"
+			"value" : "C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/cmake-build-debug"
 		},
 		{
 			"name" : "gestor_de_contacots_IS_TOP_LEVEL",
@@ -1387,7 +1387,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/Usuario/Desktop/Nueva carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots"
+			"value" : "C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots"
 		}
 	],
 	"kind" : "cache",

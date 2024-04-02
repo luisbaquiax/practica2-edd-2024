@@ -8,18 +8,18 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="C:/Users/Usuario/Desktop/Nueva carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Usuario/Desktop/Nueva carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Usuario/Desktop/Nueva carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Usuario/Desktop/Nueva carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Usuario/Desktop/Nueva carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gestor_de_contacots">
-				<Option output="C:/Users/Usuario/Desktop/Nueva carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/cmake-build-debug/gestor_de_contacots.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Usuario/Desktop/Nueva carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/cmake-build-debug"/>
+				<Option output="C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/cmake-build-debug/gestor_de_contacots.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -34,15 +34,15 @@
 					<Add directory="/mingw/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Usuario/Desktop/Nueva carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/cmake-build-debug/Makefile&quot;  VERBOSE=1 gestor_de_contacots"/>
-					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Usuario/Desktop/Nueva carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Usuario/Desktop/Nueva carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Usuario/Desktop/Nueva carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/cmake-build-debug/Makefile&quot;  VERBOSE=1 gestor_de_contacots"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gestor_de_contacots/fast">
-				<Option output="C:/Users/Usuario/Desktop/Nueva carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/cmake-build-debug/gestor_de_contacots.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Usuario/Desktop/Nueva carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/cmake-build-debug"/>
+				<Option output="C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/cmake-build-debug/gestor_de_contacots.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -57,133 +57,133 @@
 					<Add directory="/mingw/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Usuario/Desktop/Nueva carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/cmake-build-debug/Makefile&quot;  VERBOSE=1 gestor_de_contacots/fast"/>
-					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Usuario/Desktop/Nueva carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Usuario/Desktop/Nueva carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Usuario/Desktop/Nueva carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/cmake-build-debug/Makefile&quot;  VERBOSE=1 gestor_de_contacots/fast"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="C:/Users/Usuario/Desktop/Nueva carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Usuario/Desktop/Nueva carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Usuario/Desktop/Nueva carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Usuario/Desktop/Nueva carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Usuario/Desktop/Nueva carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="C:/Users/Usuario/Desktop/Nueva carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Usuario/Desktop/Nueva carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Usuario/Desktop/Nueva carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Usuario/Desktop/Nueva carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Usuario/Desktop/Nueva carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/Usuario/Desktop/Nueva carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/atributo/Atributo.cpp">
+		<Unit filename="C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/atributo/Atributo.cpp">
 			<Option target="gestor_de_contacots"/>
 		</Unit>
-		<Unit filename="C:/Users/Usuario/Desktop/Nueva carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/atributo/Atributo.h">
+		<Unit filename="C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/atributo/Atributo.h">
 			<Option target="gestor_de_contacots"/>
 		</Unit>
-		<Unit filename="C:/Users/Usuario/Desktop/Nueva carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/contact-manager/ContanctManager.cpp">
+		<Unit filename="C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/contact-manager/ContanctManager.cpp">
 			<Option target="gestor_de_contacots"/>
 		</Unit>
-		<Unit filename="C:/Users/Usuario/Desktop/Nueva carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/contact-manager/ContanctManager.h">
+		<Unit filename="C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/contact-manager/ContanctManager.h">
 			<Option target="gestor_de_contacots"/>
 		</Unit>
-		<Unit filename="C:/Users/Usuario/Desktop/Nueva carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/control-archivo/ControlArchivo.cpp">
+		<Unit filename="C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/control-archivo/ControlArchivo.cpp">
 			<Option target="gestor_de_contacots"/>
 		</Unit>
-		<Unit filename="C:/Users/Usuario/Desktop/Nueva carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/control-archivo/ControlArchivo.h">
+		<Unit filename="C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/control-archivo/ControlArchivo.h">
 			<Option target="gestor_de_contacots"/>
 		</Unit>
-		<Unit filename="C:/Users/Usuario/Desktop/Nueva carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/control-data/ControlDataInput.cpp">
+		<Unit filename="C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/control-data/ControlDataInput.cpp">
 			<Option target="gestor_de_contacots"/>
 		</Unit>
-		<Unit filename="C:/Users/Usuario/Desktop/Nueva carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/control-data/ControlDataInput.h">
+		<Unit filename="C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/control-data/ControlDataInput.h">
 			<Option target="gestor_de_contacots"/>
 		</Unit>
-		<Unit filename="C:/Users/Usuario/Desktop/Nueva carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/funcionHash/FuncionHash.cpp">
+		<Unit filename="C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/funcionHash/FuncionHash.cpp">
 			<Option target="gestor_de_contacots"/>
 		</Unit>
-		<Unit filename="C:/Users/Usuario/Desktop/Nueva carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/funcionHash/FuncionHash.h">
+		<Unit filename="C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/funcionHash/FuncionHash.h">
 			<Option target="gestor_de_contacots"/>
 		</Unit>
-		<Unit filename="C:/Users/Usuario/Desktop/Nueva carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/item-hash-table/ItemHsAttributes.cpp">
+		<Unit filename="C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/item-hash-table/ItemHsAttributes.cpp">
 			<Option target="gestor_de_contacots"/>
 		</Unit>
-		<Unit filename="C:/Users/Usuario/Desktop/Nueva carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/item-hash-table/ItemHsAttributes.h">
+		<Unit filename="C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/item-hash-table/ItemHsAttributes.h">
 			<Option target="gestor_de_contacots"/>
 		</Unit>
-		<Unit filename="C:/Users/Usuario/Desktop/Nueva carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/item-hash-table/ItemHsGroup.cpp">
+		<Unit filename="C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/item-hash-table/ItemHsGroup.cpp">
 			<Option target="gestor_de_contacots"/>
 		</Unit>
-		<Unit filename="C:/Users/Usuario/Desktop/Nueva carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/item-hash-table/ItemHsGroup.h">
+		<Unit filename="C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/item-hash-table/ItemHsGroup.h">
 			<Option target="gestor_de_contacots"/>
 		</Unit>
-		<Unit filename="C:/Users/Usuario/Desktop/Nueva carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/list/List.cpp">
+		<Unit filename="C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/list/List.cpp">
 			<Option target="gestor_de_contacots"/>
 		</Unit>
-		<Unit filename="C:/Users/Usuario/Desktop/Nueva carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/list/List.h">
+		<Unit filename="C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/list/List.h">
 			<Option target="gestor_de_contacots"/>
 		</Unit>
-		<Unit filename="C:/Users/Usuario/Desktop/Nueva carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/log/ListLog.cpp">
+		<Unit filename="C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/log/ListLog.cpp">
 			<Option target="gestor_de_contacots"/>
 		</Unit>
-		<Unit filename="C:/Users/Usuario/Desktop/Nueva carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/log/ListLog.h">
+		<Unit filename="C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/log/ListLog.h">
 			<Option target="gestor_de_contacots"/>
 		</Unit>
-		<Unit filename="C:/Users/Usuario/Desktop/Nueva carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/log/Log.cpp">
+		<Unit filename="C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/log/Log.cpp">
 			<Option target="gestor_de_contacots"/>
 		</Unit>
-		<Unit filename="C:/Users/Usuario/Desktop/Nueva carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/log/Log.h">
+		<Unit filename="C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/log/Log.h">
 			<Option target="gestor_de_contacots"/>
 		</Unit>
-		<Unit filename="C:/Users/Usuario/Desktop/Nueva carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/main.cpp">
+		<Unit filename="C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/main.cpp">
 			<Option target="gestor_de_contacots"/>
 		</Unit>
-		<Unit filename="C:/Users/Usuario/Desktop/Nueva carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/menu/Menu.cpp">
+		<Unit filename="C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/menu/Menu.cpp">
 			<Option target="gestor_de_contacots"/>
 		</Unit>
-		<Unit filename="C:/Users/Usuario/Desktop/Nueva carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/menu/Menu.h">
+		<Unit filename="C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/menu/Menu.h">
 			<Option target="gestor_de_contacots"/>
 		</Unit>
-		<Unit filename="C:/Users/Usuario/Desktop/Nueva carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/report/Report.cpp">
+		<Unit filename="C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/report/Report.cpp">
 			<Option target="gestor_de_contacots"/>
 		</Unit>
-		<Unit filename="C:/Users/Usuario/Desktop/Nueva carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/report/Report.h">
+		<Unit filename="C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/report/Report.h">
 			<Option target="gestor_de_contacots"/>
 		</Unit>
-		<Unit filename="C:/Users/Usuario/Desktop/Nueva carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/table-hash-attributes/TableHashAttributes.cpp">
+		<Unit filename="C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/table-hash-attributes/TableHashAttributes.cpp">
 			<Option target="gestor_de_contacots"/>
 		</Unit>
-		<Unit filename="C:/Users/Usuario/Desktop/Nueva carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/table-hash-attributes/TableHashAttributes.h">
+		<Unit filename="C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/table-hash-attributes/TableHashAttributes.h">
 			<Option target="gestor_de_contacots"/>
 		</Unit>
-		<Unit filename="C:/Users/Usuario/Desktop/Nueva carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/table-hash-gruoups/TableHashGruoup.cpp">
+		<Unit filename="C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/table-hash-gruoups/TableHashGruoup.cpp">
 			<Option target="gestor_de_contacots"/>
 		</Unit>
-		<Unit filename="C:/Users/Usuario/Desktop/Nueva carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/table-hash-gruoups/TableHashGruoup.h">
+		<Unit filename="C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/table-hash-gruoups/TableHashGruoup.h">
 			<Option target="gestor_de_contacots"/>
 		</Unit>
-		<Unit filename="C:/Users/Usuario/Desktop/Nueva carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/tree/ControladorArbol.cpp">
+		<Unit filename="C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/tree/ControladorArbol.cpp">
 			<Option target="gestor_de_contacots"/>
 		</Unit>
-		<Unit filename="C:/Users/Usuario/Desktop/Nueva carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/tree/ControladorArbol.h">
+		<Unit filename="C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/tree/ControladorArbol.h">
 			<Option target="gestor_de_contacots"/>
 		</Unit>
-		<Unit filename="C:/Users/Usuario/Desktop/Nueva carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/tree/Tree.cpp">
+		<Unit filename="C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/tree/Tree.cpp">
 			<Option target="gestor_de_contacots"/>
 		</Unit>
-		<Unit filename="C:/Users/Usuario/Desktop/Nueva carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/tree/Tree.h">
+		<Unit filename="C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/tree/Tree.h">
 			<Option target="gestor_de_contacots"/>
 		</Unit>
-		<Unit filename="C:/Users/Usuario/Desktop/Nueva carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/CMakeLists.txt">
+		<Unit filename="C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

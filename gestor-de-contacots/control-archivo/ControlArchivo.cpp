@@ -7,12 +7,12 @@
 #include<string>
 #include <fstream>
 #include <filesystem>
-#include <cstdlib> /
+#include <cstdlib>
 
 #ifdef _WIN32
 
 #include <direct.h> // Para Windows
-
+//#include <windows.h>
 #define mkdir _mkdir
 #else
 #include <sys/stat.h> // Para sistemas basados en Unix
@@ -49,6 +49,11 @@ void ControlArchivo::generarCarpeta(std::string ruta) {
     // Crear una carpeta
     string folderName = "../contactos/";
     folderName += ruta;
+    /*if (CreateDirectory(folderName.c_str(), NULL) != 0) {
+        std::cout << "Carpeta creada correctamente." << std::endl;
+    } else {
+        std::cerr << "Error al crear la carpeta." << std::endl;
+    }*/
     if (fs::exists(folderName) && fs::is_directory(folderName)) {
         cout << "La carpeta ya existe." << endl;
     } else {

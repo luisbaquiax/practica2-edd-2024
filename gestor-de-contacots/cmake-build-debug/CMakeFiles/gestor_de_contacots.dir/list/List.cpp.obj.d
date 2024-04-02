@@ -1,6 +1,6 @@
 CMakeFiles/gestor_de_contacots.dir/list/List.cpp.obj: \
- C:\Users\Usuario\Desktop\Nueva\ carpeta\practica2-gestor-de-contactos-edd-2024\gestor-de-contacots\list\List.cpp \
- C:\Users\Usuario\Desktop\Nueva\ carpeta\practica2-gestor-de-contactos-edd-2024\gestor-de-contacots\list\List.h \
+ C:\Users\Usuario\Desktop\practica2-gestor-de-contactos-edd-2024\gestor-de-contacots\list\List.cpp \
+ C:\Users\Usuario\Desktop\practica2-gestor-de-contactos-edd-2024\gestor-de-contacots\list\List.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iostream \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/requires_hosted.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
@@ -143,4 +143,4 @@ CMakeFiles/gestor_de_contacots.dir/list/List.cpp.obj: \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ostream.tcc \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/istream \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/istream.tcc \
- C:/Users/Usuario/Desktop/Nueva\ carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/atributo/Atributo.h
+ C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/atributo/Atributo.h

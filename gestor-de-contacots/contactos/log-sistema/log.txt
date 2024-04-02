@@ -1,16 +1,43 @@
-Fecha y hora: Sat Mar 30 15:29:58 2024
+Fecha y hora: Tue Apr 02 11:57:55 2024
 Accion: Creacion del grupo amigos
 
-Fecha y hora: Sat Mar 30 15:29:58 2024
+Fecha y hora: Tue Apr 02 11:58:14 2024
 Accion: Creacion del grupo profes
 
-Fecha y hora: Sat Mar 30 15:29:59 2024
+Fecha y hora: Tue Apr 02 11:58:29 2024
 Accion: Insercion de contacto en el grupo amigos
 
-Fecha y hora: Sat Mar 30 15:29:59 2024
+Fecha y hora: Tue Apr 02 11:58:33 2024
 Accion: Insercion de contacto en el grupo amigos
 
-Fecha y hora: Sat Mar 30 15:29:59 2024
+Fecha y hora: Tue Apr 02 11:58:50 2024
 Accion: Insercion de contacto en el grupo amigos
+
+Fecha y hora: Tue Apr 02 11:59:00 2024
+Accion: Insercion de contacto en el grupo amigos
+
+Fecha y hora: Tue Apr 02 11:59:11 2024
+Accion: Busqueda de contacto en el grupo amigos
+
+Fecha y hora: Tue Apr 02 11:59:25 2024
+Accion: Insercion de contacto en el grupo amigos
+
+Fecha y hora: Tue Apr 02 11:59:28 2024
+Accion: Insercion de contacto en el grupo amigos
+
+Fecha y hora: Tue Apr 02 11:59:37 2024
+Accion: Busqueda de contacto en el grupo amigos
+
+Fecha y hora: Tue Apr 02 12:00:06 2024
+Accion: Se ha visto el reporte de la cantidad de datos por grupo.
+
+Fecha y hora: Tue Apr 02 12:00:11 2024
+Accion: Se ha visto el reporte de la cantidad de datos del sistema.
+
+Fecha y hora: Tue Apr 02 12:00:16 2024
+Accion: Se ha visto la cantidad de contactos por grupo.
+
+Fecha y hora: Tue Apr 02 12:00:22 2024
+Accion: Se ha exportado el archivo log.
 
 

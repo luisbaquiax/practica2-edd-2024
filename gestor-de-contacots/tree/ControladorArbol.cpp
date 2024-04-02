@@ -224,9 +224,11 @@ void ControladorArbol::verInformacionRecursivo(Atributo *nodo) {
     if (nodo != nullptr) {
         if (nodo->left != nullptr) {
             std::cout << nodo->left->getInfoNextPrevious() << std::endl;
+            verInformacionRecursivo(nodo->left);
         }
         if (nodo->right != nullptr) {
             std::cout << nodo->right->getInfoNextPrevious() << std::endl;
+            verInformacionRecursivo(nodo->right);
         }
     }
 }

@@ -1,7 +1,7 @@
 CMakeFiles/gestor_de_contacots.dir/main.cpp.obj: \
- C:\Users\Usuario\Desktop\Nueva\ carpeta\practica2-gestor-de-contactos-edd-2024\gestor-de-contacots\main.cpp \
- C:\Users\Usuario\Desktop\Nueva\ carpeta\practica2-gestor-de-contactos-edd-2024\gestor-de-contacots\menu/Menu.h \
- C:/Users/Usuario/Desktop/Nueva\ carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/contact-manager/ContanctManager.h \
+ C:\Users\Usuario\Desktop\practica2-gestor-de-contactos-edd-2024\gestor-de-contacots\main.cpp \
+ C:\Users\Usuario\Desktop\practica2-gestor-de-contactos-edd-2024\gestor-de-contacots\menu/Menu.h \
+ C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/contact-manager/ContanctManager.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/string \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/requires_hosted.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
@@ -99,22 +99,22 @@ CMakeFiles/gestor_de_contacots.dir/main.cpp.obj: \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/uses_allocator.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/uses_allocator_args.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tuple \
- C:/Users/Usuario/Desktop/Nueva\ carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/table-hash-gruoups/TableHashGruoup.h \
- C:/Users/Usuario/Desktop/Nueva\ carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/table-hash-attributes/TableHashAttributes.h \
- C:/Users/Usuario/Desktop/Nueva\ carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/item-hash-table/ItemHsAttributes.h \
- C:/Users/Usuario/Desktop/Nueva\ carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/atributo/Atributo.h \
- C:/Users/Usuario/Desktop/Nueva\ carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/tree/Tree.h \
- C:/Users/Usuario/Desktop/Nueva\ carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/atributo/Atributo.h \
- C:/Users/Usuario/Desktop/Nueva\ carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/funcionHash/FuncionHash.h \
- C:/Users/Usuario/Desktop/Nueva\ carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/funcionHash/FuncionHash.h \
- C:/Users/Usuario/Desktop/Nueva\ carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/tree/Tree.h \
- C:/Users/Usuario/Desktop/Nueva\ carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/item-hash-table/ItemHsGroup.h \
- C:/Users/Usuario/Desktop/Nueva\ carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/table-hash-attributes/TableHashAttributes.h \
- C:/Users/Usuario/Desktop/Nueva\ carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/funcionHash/FuncionHash.h \
- C:/Users/Usuario/Desktop/Nueva\ carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/item-hash-table/ItemHsGroup.h \
- C:/Users/Usuario/Desktop/Nueva\ carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/tree/ControladorArbol.h \
- C:/Users/Usuario/Desktop/Nueva\ carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/tree/Tree.h \
- C:/Users/Usuario/Desktop/Nueva\ carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/list/List.h \
+ C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/table-hash-gruoups/TableHashGruoup.h \
+ C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/table-hash-attributes/TableHashAttributes.h \
+ C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/item-hash-table/ItemHsAttributes.h \
+ C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/atributo/Atributo.h \
+ C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/tree/Tree.h \
+ C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/atributo/Atributo.h \
+ C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/funcionHash/FuncionHash.h \
+ C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/funcionHash/FuncionHash.h \
+ C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/tree/Tree.h \
+ C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/item-hash-table/ItemHsGroup.h \
+ C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/table-hash-attributes/TableHashAttributes.h \
+ C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/funcionHash/FuncionHash.h \
+ C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/item-hash-table/ItemHsGroup.h \
+ C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/tree/ControladorArbol.h \
+ C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/tree/Tree.h \
+ C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/list/List.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iostream \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ostream \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ios \
@@ -160,13 +160,13 @@ CMakeFiles/gestor_de_contacots.dir/main.cpp.obj: \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ostream.tcc \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/istream \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/istream.tcc \
- C:/Users/Usuario/Desktop/Nueva\ carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/atributo/Atributo.h \
- C:/Users/Usuario/Desktop/Nueva\ carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/control-archivo/ControlArchivo.h \
- C:/Users/Usuario/Desktop/Nueva\ carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/log/ListLog.h \
- C:/Users/Usuario/Desktop/Nueva\ carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/log/Log.h \
- C:/Users/Usuario/Desktop/Nueva\ carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/log/Log.h \
- C:/Users/Usuario/Desktop/Nueva\ carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/report/Report.h \
- C:/Users/Usuario/Desktop/Nueva\ carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/contact-manager/ContanctManager.h \
- C:/Users/Usuario/Desktop/Nueva\ carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/control-data/ControlDataInput.h \
- C:/Users/Usuario/Desktop/Nueva\ carpeta/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/list/List.h \
- C:\Users\Usuario\Desktop\Nueva\ carpeta\practica2-gestor-de-contactos-edd-2024\gestor-de-contacots\control-data/ControlDataInput.h
+ C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/atributo/Atributo.h \
+ C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/control-archivo/ControlArchivo.h \
+ C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/log/ListLog.h \
+ C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/log/Log.h \
+ C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/log/Log.h \
+ C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/report/Report.h \
+ C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/contact-manager/ContanctManager.h \
+ C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/control-data/ControlDataInput.h \
+ C:/Users/Usuario/Desktop/practica2-gestor-de-contactos-edd-2024/gestor-de-contacots/list/List.h \
+ C:\Users\Usuario\Desktop\practica2-gestor-de-contactos-edd-2024\gestor-de-contacots\control-data/ControlDataInput.h
