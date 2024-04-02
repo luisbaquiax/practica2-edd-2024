@@ -314,7 +314,7 @@ void Menu::generarGraficaUnGrupoArboles() {
     graficaGrupo.append("digraph ArbolBinario {\n");
     graficaGrupo.append(contanctManager.generarGraphizUnGrupo(nameGroup));
     graficaGrupo.append("}\n");
-    std::cout << graficaGrupo;
+    //std::cout << graficaGrupo;
     nameGroup += "conarboles";
 
     contanctManager.controlArchivo.generarImagen(nameGroup, graficaGrupo);

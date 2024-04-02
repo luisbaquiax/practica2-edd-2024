@@ -10,7 +10,7 @@ TableHashAttributes::TableHashAttributes() {
     contadorId = 0;
 }
 
-void TableHashAttributes::push(std::string key, Tree *&tree) {
+void TableHashAttributes::push(std::string key, std::string typeName, Tree *&tree) {
     auto *itemsAtt = new ItemHsAttributes();
     int index = funcionHash.getIndice(funcionHash.valueHash(key), size);
 
@@ -23,6 +23,7 @@ void TableHashAttributes::push(std::string key, Tree *&tree) {
                 itemsAtt->key = key;
                 itemsAtt->tree = tree;
                 itemsAtt->id = contadorId;
+                itemsAtt->typeName = typeName;
                 itemsAttributes[i] = itemsAtt;
                 break;
             }
@@ -31,6 +32,7 @@ void TableHashAttributes::push(std::string key, Tree *&tree) {
         itemsAtt->key = key;
         itemsAtt->tree = tree;
         itemsAtt->id = contadorId;
+        itemsAtt->typeName = typeName;
         itemsAttributes[index] = itemsAtt;
     }
 

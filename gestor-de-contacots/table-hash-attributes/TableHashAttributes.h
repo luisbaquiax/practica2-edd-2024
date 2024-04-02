@@ -19,7 +19,7 @@ public:
     int size;
     int contadorId;
 
-    void push(std::string key, Tree *&tree);
+    void push(std::string key, std::string typeName, Tree *&tree);
 
     void setSize(int &number);
 

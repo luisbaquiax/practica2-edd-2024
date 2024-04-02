@@ -18,17 +18,31 @@ void TableHashGruoup::push(std::string key, TableHashAttributes *&tableHashAtrib
             std::cout << "El grupo " << key << " ya existe." << std::endl;
         } else {
             printf("mmmm\n");
+            bool exist = false;
+
             for (int i = 0; i < tam; ++i) {
-                if (items[i] == nullptr) {
-                    items[i] = new ItemHsGroup();
-                    items[i]->key = key;
-                    items[i]->tableAtributes = tableHashAtributes;
-                    return;
+                if (items[i] != nullptr) {
+                    if (items[i]->key == key) {
+                        exist = true;
+                        break;
+                    }
                 }
+            }
+            if (!exist) {
+                for (int i = 0; i < tam; ++i) {
+                    if (items[i] == nullptr) {
+                        items[i] = new ItemHsGroup();
+                        items[i]->key = key;
+                        items[i]->tableAtributes = tableHashAtributes;
+                        return;
+                    }
+                }
+            } else {
+                std::cout << "El grupo " << key << " ya existe." << std::endl;
             }
         }
 
-    }else{
+    } else {
         items[index] = new ItemHsGroup();
         items[index]->key = key;
         items[index]->tableAtributes = tableHashAtributes;
@@ -66,12 +80,14 @@ void TableHashGruoup::validarDimension() {
             contador++;
         }
     }
+    int disponible = tam - contador;
     if ((contador) > (0.6 * this->tam)) {
-        printf("Al 60%, espacio disponible %d\n", (this->tam - contador));
+
+        printf("Al 60%, espacio disponible %d\n", disponible);
         //redimnesionar
         redimensionar(tam);
     } else {
-        printf("Hay suficiente espacio, espacios disponibles %d\n", (this->tam - contador));
+        printf("Hay suficiente espacio, espacios disponibles %d\n", disponible);
     }
 }
 
