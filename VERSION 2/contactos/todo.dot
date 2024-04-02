@@ -1,0 +1,34 @@
+digraph ArbolBinario {
+GRUPOS[id="GRUPOS", label="GRUPOS"];
+amigosnombre[id="amigosnombre", label="nombre"];
+amigosapellido[id="amigosapellido", label="apellido"];
+amigoscelular[id="amigoscelular", label="celular"];
+amigos->amigosnombre;
+amigos->amigosapellido;
+amigos->amigoscelular;
+amigosnombre->amigos4nombre;
+amigos4nombre[id="amigos4nombre", label="luis1"];
+amigos1nombre[id="amigos1nombre", label="Basilio"];
+amigos4nombre->amigos1nombre;
+amigosapellido->amigos3apellido;
+amigos3apellido[id="amigos3apellido", label="apellido1"];
+amigos4apellido[id="amigos4apellido", label="apellido1"];
+amigos3apellido->amigos4apellido;
+amigoscelular->amigos3celular;
+amigos3celular[id="amigos3celular", label="5464466"];
+amigos4celular[id="amigos4celular", label="5464466"];
+amigos3celular->amigos4celular;
+GRUPOS->amigos;
+profesapellido[id="profesapellido", label="apellido"];
+profesmateria[id="profesmateria", label="materia"];
+profesfecha[id="profesfecha", label="fecha"];
+profescelular[id="profescelular", label="celular"];
+profesnombre[id="profesnombre", label="nombre"];
+profes->profesapellido;
+profes->profesmateria;
+profes->profesfecha;
+profes->profescelular;
+profes->profesnombre;
+GRUPOS->profes;
+}
+

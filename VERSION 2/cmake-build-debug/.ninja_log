@@ -1,0 +1,21 @@
+# ninja log v5
+1	432	7337444556439939	CMakeFiles/probando.dir/main.cpp.obj	b6c22ae69435450e
+437	550	7337444557581504	probando.exe	545e59e1bab9f5a
+6	835	7337451561275558	CMakeFiles/probando.dir/main.cpp.obj	b6c22ae69435450e
+22	843	7337451561326475	CMakeFiles/probando.dir/item-hash-table/ItemHsAttributes.cpp.obj	892ea8bf51e45c4c
+11	850	7337451561418484	CMakeFiles/probando.dir/atributo/Atributo.cpp.obj	768bcbf06a4d21fb
+27	887	7337451561809738	CMakeFiles/probando.dir/control-data/ControlDataInput.cpp.obj	e7aa9383d46aceef
+17	1122	7337451564149040	CMakeFiles/probando.dir/contact-manager/ContanctManager.cpp.obj	ed2f99fe3cccc525
+844	1354	7337451566467601	CMakeFiles/probando.dir/log/ListLog.cpp.obj	27c1f428b16bd47e
+851	1375	7337451566689459	CMakeFiles/probando.dir/log/Log.cpp.obj	c709bc74f34cd8d0
+34	1457	7337451567492782	CMakeFiles/probando.dir/control-archivo/ControlArchivo.cpp.obj	86c4e21a1f23aa03
+836	1571	7337451568627807	CMakeFiles/probando.dir/funcionHash/FuncionHash.cpp.obj	9add18ad108aa4f4
+887	1646	7337451569403195	CMakeFiles/probando.dir/list/List.cpp.obj	f23f77e3e5e0940e
+1123	1800	7337451570711230	CMakeFiles/probando.dir/item-hash-table/ItemHsGroup.cpp.obj	84a7dc19e3b8903c
+1354	2176	7337451574613543	CMakeFiles/probando.dir/report/Report.cpp.obj	ca0d4e6f9115b32c
+1375	2217	7337451575091827	CMakeFiles/probando.dir/table-hash-gruoups/TableHashGruoup.cpp.obj	3de90fa65cad5016
+1457	2295	7337451575890681	CMakeFiles/probando.dir/tree/ControladorArbol.cpp.obj	66e88fb5c09c4268
+1571	2368	7337451576627033	CMakeFiles/probando.dir/table-hash-attributes/TableHashAttributes.cpp.obj	d8eabc7d3d4b6401
+1646	2499	7337451577905463	CMakeFiles/probando.dir/menu/Menu.cpp.obj	20198efc71cebde6
+1801	2538	7337451578317567	CMakeFiles/probando.dir/tree/Tree.cpp.obj	bf68aca1e92ea413
+2538	2758	7337451580479809	probando.exe	2df837bc8f22f5ae

@@ -1,0 +1,9 @@
+digraph ArbolBinario {
+amigosnombre[id="amigosnombre", label="nombre"];
+amigosapellido[id="amigosapellido", label="apellido"];
+amigoscelular[id="amigoscelular", label="celular"];
+amigos->amigosnombre;
+amigos->amigosapellido;
+amigos->amigoscelular;
+}
+
