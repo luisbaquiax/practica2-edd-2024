@@ -12,6 +12,7 @@
 class ItemHsAttributes {
 public:
     std::string key;
+    std::string typeName;
     int id;
     Tree *tree;
 

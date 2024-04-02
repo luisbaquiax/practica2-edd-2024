@@ -106,7 +106,7 @@ void ContanctManager::searchContact(std::string &nameGruop, Atributo *&buscando)
         if (tabAttri != nullptr) {
             Atributo *auxi = tabAttri->tree->raiz;
             if (auxi != nullptr) {
-                printf("----------------Resultado de la busqueda----------------\n");
+                printf("|-------------------Resultado de la busqueda-------------------|\n");
                 std::cout << "Contactos encontrados con "
                           << buscando->tipo << " = "
                           << buscando->valor
@@ -121,12 +121,14 @@ void ContanctManager::searchContact(std::string &nameGruop, Atributo *&buscando)
                     std::cout << tem->getInfoNextPrevious() << std::endl;
                     tem = tem->nextList;
                 }
+                printf("|--------------------------------------------------------------|\n");
             } else {
-                printf("----------------Resultado de la busqueda----------------\n");
+                printf("|-------------------Resultado de la busqueda-------------------|\n");
                 std::cout << "No se encontro los contactos con "
                           << buscando->tipo << " = "
                           << buscando->valor
                           << " del grupo: " << nameGruop << std::endl;
+                printf("|--------------------------------------------------------------|\n");
             }
             Log *log = new Log(getFechaHora(), "Busqueda de contacto en el grupo " + nameGruop);
             listLog.insert(log);
@@ -161,25 +163,26 @@ void ContanctManager::searchContactRecursive(Atributo *buscando, Atributo *nodo,
 
 void ContanctManager::generateFileByGruop(std::string &nameGruop) {
     ItemHsGroup *itemHsGroup = hashGruoup.getItemGroup(nameGruop);
-    printf("entrando...\n");
     if (itemHsGroup != nullptr) {
-        printf("verificando...\n");
 
         //auto *listaNames = itemHsGroup->listNameAttributes;
         Tree *arbol = itemHsGroup->tableAtributes->getItemAttributeByID(1)->tree;
         Atributo *auxi = arbol->raiz;
-        printf("raiz...\n");
-        controlArchivo.generarCarpeta(nameGruop);
-        std::string content;
-        std::string name;
-        name += std::to_string(auxi->id) + " " + nameGruop + auxi->valor + ".txt";
-        content = auxi->getInfoNextPrevious();
-        printf("otros...\n");
-        controlArchivo.generarArchivos(nameGruop, name, content);
-        generarFileRecursive(auxi, nameGruop);
+
+        if (auxi != nullptr) {
+            controlArchivo.generarCarpeta(nameGruop);
+            std::string content;
+            std::string name;
+            name += std::to_string(auxi->id) + " " + nameGruop + auxi->valor + ".txt";
+            content = auxi->getInfoNextPrevious();
+            controlArchivo.generarArchivos(nameGruop, name, content);
+            generarFileRecursive(auxi, nameGruop);
+        } else {
+            printf("Aun no existen contactos en el grupo %s", nameGruop.c_str());
+        }
+        //agrear al log
         Log *log = new Log(getFechaHora(), "Exportacion de contactos del grupo " + nameGruop);
         listLog.insert(log);
-
 
     } else {
         std::cout << "No existe el grupo " << nameGruop << std::endl;
@@ -297,9 +300,10 @@ std::string ContanctManager::generarGraphizUnGrupo(std::string &nameGrup) {
     //content.append("digraph ArbolBinario {\n");
     std::string key = hashGruoup.getItemGroup(nameGrup)->tableAtributes->getItemAttributeByID(1)->key;
     int size = hashGruoup.getItemGroup(nameGrup)->tableAtributes->getItemAttribute(key)->tree->idNodo;
+    //generamos enlaces entre atributos
+    generateLabelsAttributes(content, nameGrup);
+    generarEnlaceGruposAtributos(content, nameGrup);
     if (size > 0) {
-        generateLabelsAttributes(content, nameGrup);
-        generarEnlaceGruposAtributos(content, nameGrup);
         generarEnlaceArboles(content, nameGrup);
     }
     //content.append("}\n");
@@ -315,8 +319,6 @@ std::string ContanctManager::generarGraphizUnGrupoExceptoArboles(std::string &na
         generarEnlaceGruposAtributos(content, nameGroup);
     }
     content.append("}\n");
-    Log *log = new Log(getFechaHora(), "Crear grafica de estructura del grupo " + nameGroup);
-    listLog.insert(log);
     return content;
 }
 
@@ -340,8 +342,6 @@ std::string ContanctManager::generarGraphizTodosGrupos() {
         }
     }
     contenido.append("}\n");
-    Log *log = new Log(getFechaHora(), "Generar grafica de toda la estructura ");
-    listLog.insert(log);
     return contenido;
 }
 

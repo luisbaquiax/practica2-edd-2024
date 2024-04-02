@@ -55,18 +55,25 @@ void Menu::createGruoup() {
     dataInput.establecerAcciones();
     //creamos un array de atributos
     Atributo **list = new Atributo *[dataInput.listaAtributos.size];
-    //convertimos la lista atributos a un array
-    for (int i = 0; i < dataInput.listaAtributos.size; ++i) {
-        list[i] = dataInput.listaAtributos.getByIndex(i);
+
+    if (dataInput.tipoAccion == dataInput.acciones[0]) {
+        //convertimos la lista atributos a un array
+        for (int i = 0; i < dataInput.listaAtributos.size; ++i) {
+            list[i] = new Atributo(dataInput.listaAtributos.getByIndex(i)->tipo,
+                                   dataInput.listaAtributos.getByIndex(i)->valor);
+        }
+        //creamos el grupo
+        string nameGroup = dataInput.nameGruop;
+        contanctManager.createGruop(nameGroup, list, dataInput.listaAtributos.size);
+        contanctManager.printInfoGroup(dataInput.nameGruop);
+    } else {
+        printf("El comando no esta correcto.\n");
     }
-    //creamos el grupo
-    string nameGroup = dataInput.nameGruop;
-    contanctManager.createGruop(nameGroup, list, dataInput.listaAtributos.size);
-    contanctManager.printInfoGroup(dataInput.nameGruop);
     delete[] list;
     dataInput.listaAtributos.vaciarLista();
     dataInput.lista.vaciarLista();
     dataInput.nameGruop = "";
+    dataInput.tipoAccion = "";
 
     /*Atributo *nodo1 = new Atributo("DATE", "fecha");
 
@@ -112,26 +119,32 @@ void Menu::insertContact() {
 
     std::cout << "\nNombre grupo: " << dataInput.nameGruop << std::endl;
     //creamos el array de atributos del contacto
-    Atributo **list = new Atributo *[dataInput.listaAtributos.size];
+    auto **list = new Atributo *[dataInput.listaAtributos.size];
 
-    TableHashAttributes *t = contanctManager.hashGruoup.getItemGroup(dataInput.nameGruop)->tableAtributes;
-    for (int i = 0; i < dataInput.listaAtributos.size; ++i) {
-        std::string keyCopy = t->getItemAttributeByID((i + 1))->key;
-        dataInput.listaAtributos.getByIndex(i)->tipo = keyCopy;
-    }
-    for (int i = 0; i < dataInput.listaAtributos.size; ++i) {
-        list[i] = new Atributo(dataInput.listaAtributos.getByIndex(i)->tipo,
-                               dataInput.listaAtributos.getByIndex(i)->valor);
-    }
+    if (dataInput.acciones[1] == dataInput.tipoAccion) {
 
-    //ingresarmos loa tributos del contacto
-    contanctManager.insertContact(dataInput.nameGruop, list, dataInput.listaAtributos.size);
+        TableHashAttributes *t = contanctManager.hashGruoup.getItemGroup(dataInput.nameGruop)->tableAtributes;
+        for (int i = 0; i < dataInput.listaAtributos.size; ++i) {
+            std::string keyCopy = t->getItemAttributeByID((i + 1))->key;
+            dataInput.listaAtributos.getByIndex(i)->tipo = keyCopy;
+        }
+        for (int i = 0; i < dataInput.listaAtributos.size; ++i) {
+            list[i] = new Atributo(dataInput.listaAtributos.getByIndex(i)->tipo,
+                                   dataInput.listaAtributos.getByIndex(i)->valor);
+        }
+
+        //ingresarmos loa tributos del contacto
+        contanctManager.insertContact(dataInput.nameGruop, list, dataInput.listaAtributos.size);
+
+    } else {
+        printf("El comando no esta correcto.\n");
+    }
     //vaciamos las listas correspondientes
     delete[] list;
     dataInput.listaAtributos.vaciarLista();
     dataInput.lista.vaciarLista();
     dataInput.nameGruop = "";
-
+    dataInput.tipoAccion = "";
 
     /*std::string key = "amigos";
     std::string key2 = "doctores";
@@ -178,31 +191,36 @@ void Menu::searchContact() {
 
     dataInput.analizarContenido(comando);
     dataInput.establecerAcciones();
+
     if (dataInput.tipoAccion == dataInput.acciones[2]) {
         string nameGruop = dataInput.nameGruop;
         Atributo *atributo = dataInput.atributo;
 
         contanctManager.searchContact(nameGruop, atributo);
-        dataInput.atributo = new Atributo();
-        dataInput.nameGruop = "";
+
     } else {
-        printf("La intrucciones no esta correcta\n");
+        printf("La intruccion no esta correcta\n");
     }
+    dataInput.atributo = new Atributo();
+    dataInput.nameGruop = "";
     dataInput.lista.vaciarLista();
     dataInput.listaAtributos.vaciarLista();
+    dataInput.tipoAccion = "";
     comando = "";
 }
 
 void Menu::menuReports() {
-    printf("----------------------------------------------\n");
+    printf("|---------------------------------------------------------------|\n");
     for (int i = 0; i < contanctManager.hashGruoup.tam; ++i) {
         if (contanctManager.hashGruoup.items[i] != nullptr) {
-            printf(">>>>> Datos del gruo: %s <<<<<\n", contanctManager.hashGruoup.items[i]->key.c_str());
+            printf(">>>>> Datos del gruo: %s >>>>>\n", contanctManager.hashGruoup.items[i]->key.c_str());
             Tree *arbol = contanctManager.hashGruoup.items[i]->tableAtributes->getItemAttributeByID(1)->tree;
-            contanctManager.controladorArbol.verInformacion(arbol);
+            if (arbol->raiz != nullptr) {
+                contanctManager.controladorArbol.verInformacion(arbol);
+            }
         }
     }
-    printf("----------------------------------------------\n");
+    printf("|---------------------------------------------------------------|\n");
     int opcion = 0;
     do {
         printf("                  [ Reportes ]\n");
@@ -272,7 +290,7 @@ void Menu::generarGraficaUnGrupo() {
     cin >> nameGroup;
 
     Log *log = new Log(contanctManager.getFechaHora(),
-                       "Exportacion de grafica sin arboles del grupo " + nameGroup);
+                       "Exportacion de grafica sin arboles/datos del grupo " + nameGroup);
     contanctManager.listLog.insert(log);
 
     std::string content = contanctManager.generarGraphizUnGrupoExceptoArboles(nameGroup);
@@ -289,7 +307,7 @@ void Menu::generarGraficaUnGrupoArboles() {
     cin >> nameGroup;
 
     Log *log = new Log(contanctManager.getFechaHora(),
-                       "Exportacion de grafica con arboles del grupo " + nameGroup);
+                       "Exportacion de grafica con arboles/datos del grupo " + nameGroup);
     contanctManager.listLog.insert(log);
 
     std::string graficaGrupo;
@@ -343,6 +361,9 @@ void Menu::verCantidadDatosPorGrupo() {
             report.cantidad = 0;
         }
     }
+    Log *log = new Log(contanctManager.getFechaHora(),
+                       "Se ha visto el reporte de la cantidad de datos por grupo.");
+    contanctManager.listLog.insert(log);
 }
 
 void Menu::verCantidadDatosDelSistema() {
@@ -353,6 +374,9 @@ void Menu::verCantidadDatosDelSistema() {
               << report.cantidad
               << std::endl;
     report.cantidad = 0;
+    Log *log = new Log(contanctManager.getFechaHora(),
+                       "Se ha visto el reporte de la cantidad de datos del sistema.");
+    contanctManager.listLog.insert(log);
 }
 
 void Menu::verCantidadContactosPorGrupo() {
@@ -362,8 +386,14 @@ void Menu::verCantidadContactosPorGrupo() {
             report.cantidadContactosPorGrupo(contanctManager.hashGruoup.items[i]->key, contanctManager);
         }
     }
+    Log *log = new Log(contanctManager.getFechaHora(),
+                       "Se ha visto la cantidad de contactos por grupo.");
+    contanctManager.listLog.insert(log);
 }
 
 void Menu::verExportarArchivoLog() {
+    Log *log = new Log(contanctManager.getFechaHora(),
+                       "Se ha exportado el archivo log.");
+    contanctManager.listLog.insert(log);
     report.generarArchivoLog(contanctManager);
 }
